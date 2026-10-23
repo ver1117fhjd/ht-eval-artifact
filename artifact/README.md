@@ -172,5 +172,10 @@ feature matrices, and are labelled as such:
 which is built from RTL designs keyed by variant and is unaffected by the
 golden-class correction.
 
+`e3table_4lib_ci.csv` (AUC + CI half-width) and `e3_4lib_detection.csv`
+(AUC, specificity, sensitivity, balanced accuracy at the fixed 0.5
+threshold, per held-out library and pooled) are the two files behind
+Table V; `e3x_signflip_4lib.csv` holds the exact sign-flip test.
+
 `features_all.csv` / `features_all_v2.csv` carry the corrected golden rows
 (`tools/audit_golden.py` passes: 72 golden rows, 21 unique vectors).
