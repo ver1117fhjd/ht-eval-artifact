@@ -15,9 +15,12 @@ from pathlib import Path
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
-TRUST = ROOT / "data" / "Trust-Hub"
+import os
+# 允许从包外指向真实数据（artifact 里不带 Trust-Hub 原始语料）
+TRUST = Path(os.environ.get("TRUSTHUB_ROOT", ROOT / "data" / "Trust-Hub"))
 OUT = ROOT / "tools" / "hw2vec_corpus_e1"
-FEATURES = ROOT / "experiments" / "synth_work" / "features_all_v2.csv"
+FEATURES = Path(os.environ.get(
+    "HW2VEC_FEATURES", ROOT / "experiments" / "synth_work" / "features_all_v2.csv"))
 
 
 def fix_empty_ports(txt):
@@ -126,7 +129,8 @@ def main():
     mdf = pd.DataFrame(manifest)
     mdf.to_csv(OUT.parent / "hw2vec_e1_manifest.csv", index=False)
     print(f"[prep] projects={len(mdf)} missing={miss}")
-    print(mdf.groupby("family").size().to_string())
+    if "family" in mdf.columns:
+        print(mdf.groupby("family").size().to_string())
 
 
 if __name__ == "__main__":

@@ -17,7 +17,9 @@ from sklearn.model_selection import StratifiedKFold, cross_val_predict
 
 import c1_protocol as c1
 
-EXT = ROOT / "experiments" / "e3x" / "features_multilib_v2_ext.csv"
+import os
+EXT = Path(os.environ.get("E3_EXT",
+           ROOT / "experiments" / "e3x" / "features_multilib_v2_ext.csv"))
 c1.MULTILIB_CSV = str(EXT)
 OUT = ROOT / "experiments" / "e3x"
 SEED = c1.SEED

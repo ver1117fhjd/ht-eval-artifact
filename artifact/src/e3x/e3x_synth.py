@@ -25,6 +25,9 @@ LIBS = {
     "sky130hd": (r"D:\10.7\libs\liberty\sky130hd\sky130_fd_sc_hd__tt_025C_1v80.lib", None),
     "asap7": (r"D:\10.7\libs\liberty\asap7\asap7_RVT_TT_merged.lib",
               r"D:\10.7\libs\liberty\asap7\asap7_RVT_TT_comb.lib"),
+    # GF180MCU 7t5v0 TT（源单元用 stub_models.v 的功能模型，与目标库无关，
+    # 所以换库不需要新建单元模型）
+    "gf180": (r"D:\10.7\libs\liberty\gf180\gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80.lib", None),
 }
 
 

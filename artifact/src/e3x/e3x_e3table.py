@@ -16,7 +16,9 @@ from xgboost import XGBClassifier
 import re
 
 ROOT = Path(r"D:\10.7")
-EXT = ROOT / "experiments" / "e3x" / "features_multilib_v2_ext.csv"
+import os
+EXT = Path(os.environ.get("E3_EXT",
+           ROOT / "experiments" / "e3x" / "features_multilib_v2_ext.csv"))
 OUT = ROOT / "experiments" / "e3x"
 SEED = 20261012
 META = {"family", "variant", "source", "tech", "module"}

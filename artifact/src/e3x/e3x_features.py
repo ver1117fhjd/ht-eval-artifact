@@ -23,6 +23,7 @@ LIBS = {
     "nangate45": r"D:\10.7\libs\liberty\nangate45\NangateOpenCellLibrary_typical.lib",
     "sky130hd": r"D:\10.7\libs\liberty\sky130hd\sky130_fd_sc_hd__tt_025C_1v80.lib",
     "asap7": r"D:\10.7\libs\liberty\asap7\asap7_RVT_TT_merged.lib",
+    "gf180": r"D:\10.7\libs\liberty\gf180\gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80.lib",
 }
 META = ["family", "variant", "source", "tech", "module"]
 

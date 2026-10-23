@@ -1,0 +1,49 @@
+model,feats,protocol,auc
+RF,all-32,TRIT->pairs,0.5193548387096774
+RF,all-32,pairs->TRIT,0.10289210233592881
+RF,all-32,TRIT grouped,0.9991657397107898
+RF,all-32,pairs grouped,0.6010752688172043
+RF,profile-only,TRIT->pairs,0.39650537634408606
+RF,profile-only,pairs->TRIT,0.5606229143492769
+RF,profile-only,TRIT grouped,0.9974972191323693
+RF,profile-only,pairs grouped,0.5923387096774193
+RF,geometry-only,TRIT->pairs,0.5096774193548387
+RF,geometry-only,pairs->TRIT,0.05172413793103449
+RF,geometry-only,TRIT grouped,0.9844271412680756
+RF,geometry-only,pairs grouped,0.5431451612903225
+RF,zs-per-group,TRIT->pairs,0.38749999999999996
+RF,zs-per-group,pairs->TRIT,0.11763070077864293
+RF,zs-per-group,TRIT grouped,1.0
+RF,zs-per-group,pairs grouped,0.5702956989247312
+XGB,all-32,TRIT->pairs,0.4854838709677419
+XGB,all-32,pairs->TRIT,0.0778642936596218
+XGB,all-32,TRIT grouped,0.9695494994438265
+XGB,all-32,pairs grouped,0.5131720430107527
+XGB,profile-only,TRIT->pairs,0.4384408602150538
+XGB,profile-only,pairs->TRIT,0.9449388209121246
+XGB,profile-only,TRIT grouped,0.9835465331850204
+XGB,profile-only,pairs grouped,0.5162634408602151
+XGB,geometry-only,TRIT->pairs,0.5010752688172042
+XGB,geometry-only,pairs->TRIT,0.18687430478309233
+XGB,geometry-only,TRIT grouped,0.9304783092324805
+XGB,geometry-only,pairs grouped,0.4551075268817205
+XGB,zs-per-group,TRIT->pairs,0.3071236559139785
+XGB,zs-per-group,pairs->TRIT,0.13181312569521692
+XGB,zs-per-group,TRIT grouped,1.0
+XGB,zs-per-group,pairs grouped,0.5346774193548388
+MLP,all-32,TRIT->pairs,0.5
+MLP,all-32,pairs->TRIT,0.5761957730812013
+MLP,all-32,TRIT grouped,0.9185205784204671
+MLP,all-32,pairs grouped,0.48051075268817206
+MLP,profile-only,TRIT->pairs,0.5008064516129033
+MLP,profile-only,pairs->TRIT,0.25917686318131256
+MLP,profile-only,TRIT grouped,0.9129588431590656
+MLP,profile-only,pairs grouped,0.4251344086021505
+MLP,geometry-only,TRIT->pairs,0.5067204301075269
+MLP,geometry-only,pairs->TRIT,0.4360400444938821
+MLP,geometry-only,TRIT grouped,0.9118464961067853
+MLP,geometry-only,pairs grouped,0.5353494623655914
+MLP,zs-per-group,TRIT->pairs,0.3990591397849462
+MLP,zs-per-group,pairs->TRIT,0.18909899888765297
+MLP,zs-per-group,TRIT grouped,0.9987949573600297
+MLP,zs-per-group,pairs grouped,0.6926075268817204

@@ -1,0 +1,4 @@
+model,n_groups_with_both_classes,mean_delta_auc,signflip_p,lolo_specs
+RF,11,-0.10286956393107184,0.28125,asap7:0.00; gf180:0.54; nangate45:0.25; sky130hd:0.08
+XGB,11,-0.04414276934118203,0.60546875,asap7:0.34; gf180:0.73; nangate45:0.66; sky130hd:0.27
+MLP,11,-0.10447890342070237,0.3828125,asap7:0.00; gf180:0.25; nangate45:0.19; sky130hd:0.83
