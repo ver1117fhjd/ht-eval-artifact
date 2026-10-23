@@ -1,0 +1,65 @@
+AIG vs v2 检测对比（E3 阶梯），cluster bootstrap n=1000, seed=20261012
+数据源: features_multilib.csv / features_multilib_v2.csv / aigA_features.csv / aigB_features.csv
+
+v1-celltype  pooled-random-5fold    RF   AUC=0.952 [0.369,0.999] Spec=0.841 Bal=0.830
+v1-celltype  LOLO(asap7)            RF   AUC=0.919 [0.708,0.962] Spec=0.000 Bal=0.500
+v1-celltype  LOLO(nangate45)        RF   AUC=0.857 [0.388,0.927] Spec=1.000 Bal=0.705
+v1-celltype  LOLO(sky130hd)         RF   AUC=0.858 [0.571,0.969] Spec=0.477 Bal=0.739
+v1-celltype  pooled-random-5fold    XGB  AUC=0.962 [0.427,1.000] Spec=0.879 Bal=0.841
+v1-celltype  LOLO(asap7)            XGB  AUC=0.722 [0.212,0.868] Spec=0.568 Bal=0.784
+v1-celltype  LOLO(nangate45)        XGB  AUC=0.920 [0.603,0.980] Spec=1.000 Bal=0.682
+v1-celltype  LOLO(sky130hd)         XGB  AUC=0.628 [0.496,0.770] Spec=0.000 Bal=0.500
+v1-celltype  pooled-random-5fold    MLP  AUC=0.939 [0.443,0.998] Spec=0.871 Bal=0.818
+v1-celltype  LOLO(asap7)            MLP  AUC=0.428 [0.331,0.553] Spec=0.000 Bal=0.500
+v1-celltype  LOLO(nangate45)        MLP  AUC=0.627 [0.511,0.774] Spec=0.386 Bal=0.500
+v1-celltype  LOLO(sky130hd)         MLP  AUC=0.521 [0.500,0.677] Spec=0.000 Bal=0.500
+v2-operator  pooled-random-5fold    RF   AUC=0.955 [0.393,1.000] Spec=0.856 Bal=0.845
+v2-operator  LOLO(asap7)            RF   AUC=0.791 [0.550,0.977] Spec=0.000 Bal=0.500
+v2-operator  LOLO(nangate45)        RF   AUC=0.890 [0.622,0.963] Spec=0.864 Bal=0.784
+v2-operator  LOLO(sky130hd)         RF   AUC=0.893 [0.597,0.967] Spec=0.568 Bal=0.773
+v2-operator  pooled-random-5fold    XGB  AUC=0.962 [0.427,1.000] Spec=0.879 Bal=0.841
+v2-operator  LOLO(asap7)            XGB  AUC=0.656 [0.393,0.845] Spec=0.000 Bal=0.500
+v2-operator  LOLO(nangate45)        XGB  AUC=0.876 [0.507,0.979] Spec=1.000 Bal=0.682
+v2-operator  LOLO(sky130hd)         XGB  AUC=0.802 [0.479,0.954] Spec=0.000 Bal=0.500
+v2-operator  pooled-random-5fold    MLP  AUC=0.930 [0.403,0.990] Spec=0.879 Bal=0.822
+v2-operator  LOLO(asap7)            MLP  AUC=0.365 [0.181,0.594] Spec=0.000 Bal=0.500
+v2-operator  LOLO(nangate45)        MLP  AUC=0.587 [0.511,0.784] Spec=0.386 Bal=0.500
+v2-operator  LOLO(sky130hd)         MLP  AUC=0.498 [0.451,0.750] Spec=0.000 Bal=0.500
+AIG-A        pooled-random-5fold    RF   AUC=0.972 [0.542,1.000] Spec=0.894 Bal=0.871
+AIG-A        LOLO(asap7)            RF   AUC=0.944 [0.553,1.000] Spec=0.750 Bal=0.852
+AIG-A        LOLO(nangate45)        RF   AUC=0.896 [0.688,1.000] Spec=1.000 Bal=0.784
+AIG-A        LOLO(sky130hd)         RF   AUC=0.973 [0.635,1.000] Spec=0.909 Bal=0.875
+AIG-A        pooled-random-5fold    XGB  AUC=0.974 [0.543,1.000] Spec=0.879 Bal=0.871
+AIG-A        LOLO(asap7)            XGB  AUC=0.946 [0.553,1.000] Spec=0.750 Bal=0.852
+AIG-A        LOLO(nangate45)        XGB  AUC=0.902 [0.713,1.000] Spec=0.841 Bal=0.784
+AIG-A        LOLO(sky130hd)         XGB  AUC=0.948 [0.519,1.000] Spec=0.909 Bal=0.875
+AIG-A        pooled-random-5fold    MLP  AUC=0.962 [0.646,0.994] Spec=0.902 Bal=0.879
+AIG-A        LOLO(asap7)            MLP  AUC=0.739 [0.506,0.941] Spec=0.614 Bal=0.807
+AIG-A        LOLO(nangate45)        MLP  AUC=0.890 [0.738,1.000] Spec=0.841 Bal=0.807
+AIG-A        LOLO(sky130hd)         MLP  AUC=0.899 [0.400,1.000] Spec=0.909 Bal=0.875
+AIG-B        pooled-random-5fold    RF   AUC=0.958 [0.423,1.000] Spec=0.879 Bal=0.841
+AIG-B        LOLO(asap7)            RF   AUC=0.839 [0.524,0.933] Spec=0.705 Bal=0.818
+AIG-B        LOLO(nangate45)        RF   AUC=0.804 [0.635,1.000] Spec=0.136 Bal=0.568
+AIG-B        LOLO(sky130hd)         RF   AUC=0.833 [0.640,0.994] Spec=0.341 Bal=0.591
+AIG-B        pooled-random-5fold    XGB  AUC=0.960 [0.426,0.999] Spec=0.864 Bal=0.833
+AIG-B        LOLO(asap7)            XGB  AUC=0.783 [0.519,0.875] Spec=0.614 Bal=0.784
+AIG-B        LOLO(nangate45)        XGB  AUC=0.763 [0.514,0.959] Spec=0.386 Bal=0.545
+AIG-B        LOLO(sky130hd)         XGB  AUC=0.793 [0.545,0.928] Spec=0.341 Bal=0.580
+AIG-B        pooled-random-5fold    MLP  AUC=0.852 [0.597,0.987] Spec=0.932 Bal=0.826
+AIG-B        LOLO(asap7)            MLP  AUC=0.637 [0.500,0.758] Spec=0.091 Bal=0.534
+AIG-B        LOLO(nangate45)        MLP  AUC=0.860 [0.617,1.000] Spec=0.909 Bal=0.727
+AIG-B        LOLO(sky130hd)         MLP  AUC=0.856 [0.566,1.000] Spec=0.091 Bal=0.545
+
+== LOLO 分模型离散度（3 折 AUC 的 std / range）==
+v1-celltype  RF   std=0.0289 range=0.062 vals=[0.919, 0.857, 0.858]
+v1-celltype  XGB  std=0.1216 range=0.292 vals=[0.722, 0.92, 0.628]
+v1-celltype  MLP  std=0.0812 range=0.199 vals=[0.428, 0.627, 0.521]
+v2-operator  RF   std=0.0476 range=0.102 vals=[0.791, 0.89, 0.893]
+v2-operator  XGB  std=0.0914 range=0.220 vals=[0.656, 0.876, 0.802]
+v2-operator  MLP  std=0.0911 range=0.222 vals=[0.365, 0.587, 0.498]
+AIG-A        RF   std=0.0316 range=0.076 vals=[0.944, 0.896, 0.973]
+AIG-A        XGB  std=0.0211 range=0.046 vals=[0.946, 0.902, 0.948]
+AIG-A        MLP  std=0.0735 range=0.160 vals=[0.739, 0.89, 0.899]
+AIG-B        RF   std=0.0152 range=0.035 vals=[0.839, 0.804, 0.833]
+AIG-B        XGB  std=0.0127 range=0.030 vals=[0.783, 0.763, 0.793]
+AIG-B        MLP  std=0.1042 range=0.223 vals=[0.637, 0.86, 0.856]

@@ -1,0 +1,30 @@
+/* fixture: minimal sky130-style Liberty (QUOTED direction values on purpose) */
+library (sky130_mini) {
+  cell (sky130_fd_sc_hd__a21oi_1) {
+    pin (A1) { direction : "input"; }
+    pin (A2) { direction : "input"; }
+    pin (B1) { direction : "input"; }
+    pin (Y)  { direction : "output"; function : "(!A1&!B1)|(!A2&!B1)"; }
+  }
+  cell (sky130_fd_sc_hd__o21ai_1) {
+    pin (A1) { direction : "input"; }
+    pin (A2) { direction : "input"; }
+    pin (B1) { direction : "input"; }
+    pin (Y)  { direction : "output"; function : "(!A1&!A2)+(!B1)"; }
+  }
+  cell (sky130_fd_sc_hd__and2_1) {
+    pin (A) { direction : "input"; }
+    pin (B) { direction : "input"; }
+    pin (X) { direction : "output"; function : "A&B"; }
+  }
+  cell (sky130_fd_sc_hd__inv_1) {
+    pin (A) { direction : "input"; }
+    pin (Y) { direction : "output"; function : "!A"; }
+  }
+  cell (sky130_fd_sc_hd__dfxtp_1) {
+    ff (IQ, IQN) { next_state : "D"; clocked_on : "CLK"; }
+    pin (D)  { direction : "input"; }
+    pin (CLK) { direction : "input"; }
+    pin (Q)  { direction : "output"; function : "IQ"; }
+  }
+}

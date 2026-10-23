@@ -1,0 +1,35 @@
+/* fixture: minimal Nangate-style Liberty for test_lib_ops fallback mode */
+library (nangate45_mini) {
+  cell (AOI21_X1) {
+    pin (A)  { direction : input; }
+    pin (B1) { direction : input; }
+    pin (B2) { direction : input; }
+    pin (Y)  { direction : output; function : "!(A | (B1 & B2))"; }
+  }
+  cell (OAI21_X1) {
+    pin (A)  { direction : input; }
+    pin (B1) { direction : input; }
+    pin (B2) { direction : input; }
+    pin (Y)  { direction : output; function : "!(A & (B1 | B2))"; }
+  }
+  cell (AND2_X1) {
+    pin (A) { direction : input; }
+    pin (B) { direction : input; }
+    pin (Y) { direction : output; function : "A & B"; }
+  }
+  cell (INV_X1) {
+    pin (A) { direction : input; }
+    pin (Y) { direction : output; function : "!A"; }
+  }
+  cell (NAND2_X1) {
+    pin (A) { direction : input; }
+    pin (B) { direction : input; }
+    pin (Y) { direction : output; function : "!(A & B)"; }
+  }
+  cell (DFF_X1) {
+    ff (IQ, IQN) { next_state : "D"; clocked_on : "CK"; }
+    pin (D)  { direction : input; }
+    pin (CK) { direction : input; }
+    pin (Q)  { direction : output; function : "IQ"; }
+  }
+}

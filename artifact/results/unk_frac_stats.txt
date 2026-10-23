@@ -1,0 +1,21 @@
+unknown-cell fraction distribution (features_all_v2.csv, 1059 designs, generic netlists)
+column: unk_cell_frac
+overall: mean=0.1760 median=0.1931 max=0.9106 p90=0.3132
+              count    mean  median     max
+family                                     
+ETHERNET-MAC      4  0.9106  0.9106  0.9106
+VGA_LCD           2  0.9020  0.9020  0.9021
+S38417            6  0.7060  0.7065  0.7065
+S35932            6  0.7039  0.7044  0.7044
+S38584            6  0.6999  0.7000  0.7001
+S15850            2  0.6464  0.6464  0.6497
+B15               8  0.6040  0.6040  0.6368
+B19               2  0.4977  0.4977  0.4977
+RS232            29  0.4843  0.4216  0.6881
+MC8051           14  0.2647  0.2647  0.2647
+WB_CONMAX         6  0.2640  0.0158  0.7606
+TRIT-TS         323  0.2547  0.2898  0.3147
+PIC16F84          8  0.1919  0.1938  0.1951
+memctrl           1  0.1684  0.1684  0.1684
+TRIT-TC         588  0.0984  0.0000  0.3132
+AES              54  0.0001  0.0000  0.0007

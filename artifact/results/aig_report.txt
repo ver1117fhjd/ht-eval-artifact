@@ -1,0 +1,43 @@
+AIG 归一化消融报告（评审建议：为什么不用 AIG）
+口径：漂移=max/min 倍率（clip 1e-4）中位/最大，与 c2_drift_report 一致
+
+== ① 跨库漂移（99 设计 × 3 库）==
+-- v1 单元类（99 组）
+   comb_depth_max     中位 1.750    最大 7.000     (99)
+   frac_and           中位 1.361    最大 2.937     (99)
+   frac_inv           中位 1.571    最大 23.506    (99)
+   frac_seq           中位 1.108    最大 1.469     (99)
+-- v2 算子(v2 列)（99 组）
+   comb_opdepth_max   中位 4.000    最大 7.278     (99)
+   frac_op_and        中位 1.064    最大 1.724     (99)
+   frac_op_mux        中位 29.000   最大 960.000   (99)
+   frac_op_not        中位 1.322    最大 1.388     (99)
+   frac_op_or         中位 1.302    最大 1.747     (99)
+   frac_op_xor        中位 1.348    最大 4.617     (99)
+-- AIG-A 直映（99 组）
+   comb_depth_max     中位 1.000    最大 1.167     (99)
+   frac_and           中位 1.004    最大 1.088     (99)
+   frac_inv           中位 1.012    最大 1.159     (99)
+   frac_seq           中位 1.221    最大 1.507     (99)
+-- AIG-B 再归一（99 组）
+   comb_depth_max     中位 1.080    最大 1.308     (99)
+   frac_and           中位 1.016    最大 1.101     (99)
+   frac_inv           中位 1.022    最大 1.172     (99)
+   frac_seq           中位 1.030    最大 1.478     (99)
+
+== ② 分解可加性探针（AIG 节点数 and+not，深度=ltp）==
+   AOI21    and=2   not=2   nodes=4   depth=3
+   AOI211   and=4   not=3   nodes=7   depth=4
+   OAI211   and=4   not=7   nodes=11  depth=6
+   and2     and=1   not=0   nodes=1   depth=1
+   inv1     and=0   not=1   nodes=1   depth=1
+   mux2     and=3   not=5   nodes=8   depth=4
+   or2      and=1   not=3   nodes=4   depth=3
+   xor2     and=3   not=4   nodes=7   depth=4
+   >>> AOI21 nodes=4 vs and+or+inv 之和=6 （不等=违反 Definition 可加性）
+
+== ③ 设计间区分度（组合特征）==
+   v1: n_design=99 unique_vectors=46 std=frac_and=0.0293 frac_inv=0.0416 frac_mux=0.0449 frac_or=0.0292 frac_xor=0.0267
+   v2: n_design=99 unique_vectors=44 std=frac_op_and=0.0407 frac_op_mux=0.0296 frac_op_not=0.0242 frac_op_or=0.0346 frac_op_xor=0.0154
+   AIG-A: n_design=99 unique_vectors=47 std=frac_and=0.0547 frac_inv=0.0207
+   AIG-B: n_design=99 unique_vectors=45 std=frac_and=0.0546 frac_inv=0.0199

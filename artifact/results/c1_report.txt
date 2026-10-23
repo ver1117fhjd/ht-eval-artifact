@@ -1,0 +1,56 @@
+C1 无泄漏评价协议 —— 结果汇总
+数据源: D:/10.7/paper/host2027/artifact/results/features_all_v2.csv / D:/10.7/paper/host2027/artifact/results/features_multilib_v2.csv
+seed=20261012, bootstrap n=1000（cluster=base design，split 组与 CI 组分离——R4 整改口径），指标=AP/AUC/F1/Sens/Spec/BalAcc/Gmean
+
+==== E1-pairs ====
+pooled-random-5fold              RF   n= 122 pos=  62 AP=0.873 [0.515,0.981] AUC=0.867 [0.460,0.979] F1=0.762 Sens=0.774 Spec=0.733 Bal=0.754 Gm=0.753
+pooled-random-5fold              XGB  n= 122 pos=  62 AP=0.886 [0.540,0.981] AUC=0.881 [0.513,0.979] F1=0.777 Sens=0.758 Spec=0.800 Bal=0.779 Gm=0.779
+pooled-random-5fold              MLP  n= 122 pos=  62 AP=0.888 [0.521,0.982] AUC=0.876 [0.431,0.979] F1=0.754 Sens=0.742 Spec=0.767 Bal=0.754 Gm=0.754
+group-by-variant-5fold           RF   n= 122 pos=  62 AP=0.960 [0.760,0.996] AUC=0.958 [0.754,0.996] F1=0.864 Sens=0.871 Spec=0.850 Bal=0.860 Gm=0.860
+group-by-variant-5fold           XGB  n= 122 pos=  62 AP=0.954 [0.720,0.993] AUC=0.954 [0.759,0.994] F1=0.862 Sens=0.855 Spec=0.867 Bal=0.861 Gm=0.861
+group-by-variant-5fold           MLP  n= 122 pos=  62 AP=0.937 [0.674,0.990] AUC=0.923 [0.616,0.988] F1=0.823 Sens=0.823 Spec=0.817 Bal=0.820 Gm=0.820
+group-by-base-5fold              RF   n= 122 pos=  62 AP=0.600 [0.529,0.780] AUC=0.601 [0.457,0.794] F1=0.659 Sens=0.919 Spec=0.100 Bal=0.510 Gm=0.303
+group-by-base-5fold              XGB  n= 122 pos=  62 AP=0.576 [0.514,0.691] AUC=0.513 [0.467,0.601] F1=0.632 Sens=0.887 Spec=0.050 Bal=0.469 Gm=0.211
+group-by-base-5fold              MLP  n= 122 pos=  62 AP=0.478 [0.431,0.714] AUC=0.481 [0.377,0.681] F1=0.663 Sens=0.887 Spec=0.183 Bal=0.535 Gm=0.403
+leave-one-family-out             RF   n= 122 pos=  62 AP=0.600 [0.521,0.777] AUC=0.580 [0.430,0.771] F1=0.659 Sens=0.919 Spec=0.100 Bal=0.510 Gm=0.303
+leave-one-family-out             XGB  n= 122 pos=  62 AP=0.575 [0.513,0.711] AUC=0.506 [0.459,0.614] F1=0.627 Sens=0.839 Spec=0.133 Bal=0.486 Gm=0.334
+leave-one-family-out             MLP  n= 122 pos=  62 AP=0.517 [0.501,0.775] AUC=0.526 [0.477,0.714] F1=0.663 Sens=0.903 Spec=0.150 Bal=0.527 Gm=0.368
+
+==== E2-full ====
+pooled-random-5fold              RF   n=1033 pos= 961 AP=0.998 [0.995,1.000] AUC=0.981 [0.944,0.995] F1=0.977 Sens=0.986 Spec=0.569 Bal=0.778 Gm=0.749
+pooled-random-5fold              XGB  n=1033 pos= 961 AP=0.993 [0.985,0.999] AUC=0.961 [0.877,0.992] F1=0.983 Sens=0.990 Spec=0.694 Bal=0.842 Gm=0.829
+pooled-random-5fold              MLP  n=1033 pos= 961 AP=0.978 [0.932,0.994] AUC=0.875 [0.692,0.953] F1=0.977 Sens=0.982 Spec=0.611 Bal=0.797 Gm=0.775
+group-by-variant-5fold           RF   n=1033 pos= 961 AP=0.991 [0.980,0.997] AUC=0.904 [0.762,0.975] F1=0.924 Sens=0.874 Spec=0.764 Bal=0.819 Gm=0.817
+group-by-variant-5fold           XGB  n=1033 pos= 961 AP=0.995 [0.978,0.999] AUC=0.944 [0.801,0.992] F1=0.864 Sens=0.770 Spec=0.847 Bal=0.809 Gm=0.808
+group-by-variant-5fold           MLP  n=1033 pos= 961 AP=0.958 [0.861,0.988] AUC=0.557 [0.263,0.840] F1=0.698 Sens=0.553 Spec=0.583 Bal=0.568 Gm=0.568
+group-by-base-5fold              RF   n=1033 pos= 961 AP=0.972 [0.911,0.990] AUC=0.701 [0.459,0.891] F1=0.959 Sens=0.982 Spec=0.125 Bal=0.554 Gm=0.350
+group-by-base-5fold              XGB  n=1033 pos= 961 AP=0.936 [0.826,0.983] AUC=0.446 [0.256,0.733] F1=0.773 Sens=0.671 Spec=0.139 Bal=0.405 Gm=0.305
+group-by-base-5fold              MLP  n=1033 pos= 961 AP=0.910 [0.746,0.980] AUC=0.393 [0.206,0.703] F1=0.893 Sens=0.855 Spec=0.194 Bal=0.525 Gm=0.408
+
+==== E3-multilib ====
+leave-one-library-out(asap7)     RF   n=  88 pos=  44 AP=0.861 [0.650,0.984] AUC=0.791 [0.550,0.977] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+leave-one-library-out(asap7)     XGB  n=  88 pos=  44 AP=0.627 [0.449,0.853] AUC=0.656 [0.379,0.842] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+leave-one-library-out(asap7)     MLP  n=  88 pos=  44 AP=0.469 [0.427,0.574] AUC=0.365 [0.189,0.594] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+leave-one-library-out(nangate45) RF   n=  88 pos=  44 AP=0.891 [0.589,0.965] AUC=0.890 [0.622,0.963] F1=0.765 Sens=0.705 Spec=0.864 Bal=0.784 Gm=0.780
+leave-one-library-out(nangate45) XGB  n=  88 pos=  44 AP=0.858 [0.507,0.983] AUC=0.876 [0.503,0.976] F1=0.533 Sens=0.364 Spec=1.000 Bal=0.682 Gm=0.603
+leave-one-library-out(nangate45) MLP  n=  88 pos=  44 AP=0.713 [0.507,0.818] AUC=0.587 [0.511,0.781] F1=0.551 Sens=0.614 Spec=0.386 Bal=0.500 Gm=0.487
+leave-one-library-out(sky130hd)  RF   n=  88 pos=  44 AP=0.889 [0.627,0.971] AUC=0.893 [0.597,0.965] F1=0.811 Sens=0.977 Spec=0.568 Bal=0.773 Gm=0.745
+leave-one-library-out(sky130hd)  XGB  n=  88 pos=  44 AP=0.734 [0.568,0.936] AUC=0.802 [0.479,0.942] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+leave-one-library-out(sky130hd)  MLP  n=  88 pos=  44 AP=0.489 [0.475,0.741] AUC=0.498 [0.454,0.750] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+pooled-random-5fold              RF   n= 264 pos= 132 AP=0.957 [0.483,1.000] AUC=0.955 [0.393,1.000] F1=0.843 Sens=0.833 Spec=0.856 Bal=0.845 Gm=0.845
+pooled-random-5fold              XGB  n= 264 pos= 132 AP=0.962 [0.512,1.000] AUC=0.962 [0.427,1.000] F1=0.835 Sens=0.803 Spec=0.879 Bal=0.841 Gm=0.840
+pooled-random-5fold              MLP  n= 264 pos= 132 AP=0.934 [0.505,0.993] AUC=0.930 [0.403,0.990] F1=0.811 Sens=0.765 Spec=0.879 Bal=0.822 Gm=0.820
+
+==== ΔAUC（paired cluster bootstrap，R4 整改 P0-3）====
+E1-pairs   RF   pooled-minus-base    dAUC=+0.198 [-0.067,+0.332]
+E1-pairs   RF   variant-minus-base   dAUC=+0.333 [+0.178,+0.489]
+E1-pairs   XGB  pooled-minus-base    dAUC=+0.300 [-0.043,+0.495]
+E1-pairs   XGB  variant-minus-base   dAUC=+0.414 [+0.194,+0.516]
+E1-pairs   MLP  pooled-minus-base    dAUC=+0.318 [-0.139,+0.592]
+E1-pairs   MLP  variant-minus-base   dAUC=+0.386 [+0.029,+0.607]
+E2-full    RF   pooled-minus-base    dAUC=+0.265 [+0.077,+0.506]
+E2-full    RF   variant-minus-base   dAUC=+0.186 [+0.004,+0.422]
+E2-full    XGB  pooled-minus-base    dAUC=+0.474 [+0.205,+0.712]
+E2-full    XGB  variant-minus-base   dAUC=+0.454 [+0.175,+0.691]
+E2-full    MLP  pooled-minus-base    dAUC=+0.427 [+0.074,+0.721]
+E2-full    MLP  variant-minus-base   dAUC=+0.127 [-0.292,+0.537]

@@ -1,0 +1,32 @@
+文献管线实例化（R3/R4 整改 P1-5）
+数据源: results/features_all_v2.csv / results/features_multilib_v2.csv
+DT+PCA=[13] Case-I 管线；KNN5=[5] case-based 管线（k=5）
+CI=cluster bootstrap 1000，聚类=base design（R4 口径）
+
+==== E1-pairs ====
+pooled-random-5fold              DT+PCA  n= 122 AUC=0.848 [0.585,0.939] Spec=0.800 Bal=0.795
+pooled-random-5fold              KNN5    n= 122 AUC=0.780 [0.283,0.958] Spec=0.600 Bal=0.623
+group-by-variant-5fold           DT+PCA  n= 122 AUC=0.918 [0.758,0.964] Spec=0.867 Bal=0.877
+group-by-variant-5fold           KNN5    n= 122 AUC=0.840 [0.460,0.968] Spec=0.767 Bal=0.722
+group-by-base-5fold              DT+PCA  n= 122 AUC=0.512 [0.500,0.566] Spec=0.133 Bal=0.510
+group-by-base-5fold              KNN5    n= 122 AUC=0.488 [0.400,0.555] Spec=0.850 Bal=0.481
+leave-one-family-out             DT+PCA  n= 122 AUC=0.512 [0.500,0.566] Spec=0.133 Bal=0.510
+leave-one-family-out             KNN5    n= 122 AUC=0.515 [0.500,0.571] Spec=0.467 Bal=0.508
+
+==== E2-full ====
+pooled-random-5fold              DT+PCA  n=1033 AUC=0.966 [0.891,0.997] Spec=0.792 Bal=0.890
+pooled-random-5fold              KNN5    n=1033 AUC=0.974 [0.912,0.997] Spec=0.750 Bal=0.861
+group-by-variant-5fold           DT+PCA  n=1033 AUC=0.963 [0.905,0.996] Spec=0.861 Bal=0.901
+group-by-variant-5fold           KNN5    n=1033 AUC=0.990 [0.965,0.996] Spec=0.833 Bal=0.905
+group-by-base-5fold              DT+PCA  n=1033 AUC=0.463 [0.258,0.734] Spec=0.264 Bal=0.450
+group-by-base-5fold              KNN5    n=1033 AUC=0.852 [0.618,0.976] Spec=0.514 Bal=0.694
+
+==== E3-multilib ====
+leave-one-library-out(asap7)     DT+PCA  n=  88 AUC=0.500 [0.500,0.500] Spec=0.000 Bal=0.500
+leave-one-library-out(asap7)     KNN5    n=  88 AUC=0.500 [0.500,0.500] Spec=0.000 Bal=0.500
+leave-one-library-out(nangate45) DT+PCA  n=  88 AUC=0.553 [0.500,0.800] Spec=0.091 Bal=0.545
+leave-one-library-out(nangate45) KNN5    n=  88 AUC=0.515 [0.500,0.722] Spec=0.341 Bal=0.500
+leave-one-library-out(sky130hd)  DT+PCA  n=  88 AUC=0.592 [0.500,0.800] Spec=0.750 Bal=0.580
+leave-one-library-out(sky130hd)  KNN5    n=  88 AUC=0.505 [0.500,0.641] Spec=0.250 Bal=0.500
+pooled-random-5fold              DT+PCA  n= 264 AUC=0.931 [0.433,0.980] Spec=0.856 Bal=0.837
+pooled-random-5fold              KNN5    n= 264 AUC=0.891 [0.360,0.973] Spec=0.848 Bal=0.754

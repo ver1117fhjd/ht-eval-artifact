@@ -1,0 +1,20 @@
+GCN 基线 —— 无泄漏协议下的图神经网络（8 维算子画像节点特征）
+seed=20261012, epochs=20, node_budget=300000, GCNConv x3 hidden=64, lr=2e-3
+
+==== E1-pairs ====
+pooled-random-5fold              GCN  n= 122 pos=  62 AP=0.636 [0.517,0.745] AUC=0.544 F1=0.573 Sens=0.661 Spec=0.333 Bal=0.497 Gm=0.469
+group-by-variant-5fold           GCN  n= 122 pos=  62 AP=0.704 [0.589,0.806] AUC=0.666 F1=0.639 Sens=0.613 Spec=0.683 Bal=0.648 Gm=0.647
+group-by-base-5fold              GCN  n= 122 pos=  62 AP=0.651 [0.524,0.763] AUC=0.575 F1=0.634 Sens=0.823 Spec=0.200 Bal=0.511 Gm=0.406
+leave-one-family-out             GCN  n= 122 pos=  62 AP=0.602 [0.477,0.731] AUC=0.576 F1=0.469 Sens=0.371 Spec=0.783 Bal=0.577 Gm=0.539
+
+==== E2-full ====
+pooled-random-5fold              GCN  n=1033 pos= 961 AP=0.995 [0.993,0.997] AUC=0.938 F1=0.939 Sens=0.905 Spec=0.681 Bal=0.793 Gm=0.785
+group-by-variant-5fold           GCN  n=1033 pos= 961 AP=0.983 [0.976,0.989] AUC=0.815 F1=0.572 Sens=0.402 Spec=0.972 Bal=0.687 Gm=0.625
+group-by-base-5fold              GCN  n=1033 pos= 961 AP=0.967 [0.957,0.976] AUC=0.659 F1=0.842 Sens=0.759 Spec=0.417 Bal=0.588 Gm=0.562
+
+==== E3-multilib ====
+leave-one-library-out(asap7)     GCN  n=  88 pos=  44 AP=0.663 [0.520,0.807] AUC=0.653 F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+leave-one-library-out(nangate45) GCN  n=  88 pos=  44 AP=0.532 [0.402,0.674] AUC=0.423 F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+leave-one-library-out(sky130hd)  GCN  n=  88 pos=  44 AP=0.600 [0.476,0.730] AUC=0.453 F1=0.600 Sens=0.750 Spec=0.250 Bal=0.500 Gm=0.433
+pooled-random-5fold              GCN  n= 264 pos= 132 AP=0.571 [0.494,0.659] AUC=0.509 F1=0.606 Sens=0.811 Spec=0.136 Bal=0.473 Gm=0.332
+

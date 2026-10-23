@@ -1,0 +1,59 @@
+R7 framework-disjoint 补丁实验
+数据源: D:\10.7\paper\host2027\artifact\experiments\synth_work\features_all_v2.csv（v2，显式钉死）
+seed=20261012, n_jobs=1, cluster bootstrap（cluster=base design）
+总行数 1033；TRIT 块 911 行 (pos=899)；非 TRIT 122 行 (pos=62)
+框架块: TRIT + ['AES', 'B15', 'B19', 'MC8051', 'PIC16F84', 'RS232', 'S15850', 'S35932', 'S38417', 'S38584', 'VGA_LCD', 'WB_CONMAX']
+
+==== A. 双向跨框架迁移（train 一个框架 → test 另一框架）====
+train-TRIT->test-nonTRIT     RF   train=911(899+) test=122(62+) test_groups=12  AP=0.518 [0.493,0.658] AUC=0.516 [0.482,0.602] F1=0.659 Sens=0.935 Spec=0.067 Bal=0.501 Gm=0.250
+train-nonTRIT->test-TRIT     RF   train=122(62+) test=911(899+) test_groups=8  AP=0.988 [0.986,0.994] AUC=0.524 [0.457,0.660] F1=0.650 Sens=0.484 Spec=0.583 Bal=0.534 Gm=0.531
+train-TRIT->test-nonTRIT     XGB  train=911(899+) test=122(62+) test_groups=12  AP=0.539 [0.496,0.624] AUC=0.526 [0.432,0.607] F1=0.630 Sens=0.823 Spec=0.183 Bal=0.503 Gm=0.388
+train-nonTRIT->test-TRIT     XGB  train=122(62+) test=911(899+) test_groups=8  AP=0.985 [0.983,0.989] AUC=0.431 [0.373,0.496] F1=0.031 Sens=0.016 Spec=1.000 Bal=0.508 Gm=0.125
+train-TRIT->test-nonTRIT     MLP  train=911(899+) test=122(62+) test_groups=12  AP=0.509 [0.500,0.551] AUC=0.501 [0.500,0.517] F1=0.674 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+train-nonTRIT->test-TRIT     MLP  train=122(62+) test=911(899+) test_groups=8  AP=0.989 [0.988,0.994] AUC=0.528 [0.515,0.684] F1=0.037 Sens=0.019 Spec=1.000 Bal=0.509 Gm=0.138
+
+==== B. leave-one-framework-out（每折留出一个框架块）====
+holdout(AES         ) RF   test=  54(  27+) groups= 1  AP=0.689 [0.689,0.689] AUC=0.444 [0.444,0.444] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(B15         ) RF   test=   8(   4+) groups= 1  AP=0.500 [0.500,0.500] AUC=0.000 [0.000,0.000] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(B19         ) RF   test=   2(   2+) groups= 1  AP=1.000 [nan,nan] AUC=nan [nan,nan] F1=1.000 Sens=1.000 Spec=nan Bal=nan Gm=nan
+holdout(MC8051      ) RF   test=  14(   7+) groups= 1  AP=0.500 [0.500,0.500] AUC=0.500 [0.500,0.500] F1=0.000 Sens=0.000 Spec=1.000 Bal=0.500 Gm=0.000
+holdout(PIC16F84    ) RF   test=   8(   4+) groups= 1  AP=0.875 [0.875,0.875] AUC=0.750 [0.750,0.750] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(RS232       ) RF   test=   8(   4+) groups= 1  AP=0.583 [0.583,0.583] AUC=0.250 [0.250,0.250] F1=0.000 Sens=0.000 Spec=1.000 Bal=0.500 Gm=0.000
+holdout(S15850      ) RF   test=   2(   1+) groups= 1  AP=1.000 [1.000,1.000] AUC=1.000 [1.000,1.000] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(S35932      ) RF   test=   6(   3+) groups= 1  AP=0.833 [0.833,0.833] AUC=0.833 [0.833,0.833] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(S38417      ) RF   test=   6(   3+) groups= 1  AP=0.833 [0.833,0.833] AUC=0.833 [0.833,0.833] F1=0.000 Sens=0.000 Spec=1.000 Bal=0.500 Gm=0.000
+holdout(S38584      ) RF   test=   6(   3+) groups= 1  AP=0.833 [0.833,0.833] AUC=0.667 [0.667,0.667] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(TRIT        ) RF   test= 911( 899+) groups= 8  AP=0.988 [0.986,0.994] AUC=0.524 [0.457,0.660] F1=0.650 Sens=0.484 Spec=0.583 Bal=0.534 Gm=0.531
+holdout(VGA_LCD     ) RF   test=   2(   1+) groups= 1  AP=0.500 [0.500,0.500] AUC=0.500 [0.500,0.500] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(WB_CONMAX   ) RF   test=   6(   3+) groups= 1  AP=0.806 [0.806,0.806] AUC=0.833 [0.833,0.833] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+  RF macro-AUC over 13 framework folds = nan
+holdout(AES         ) XGB  test=  54(  27+) groups= 1  AP=0.782 [0.782,0.782] AUC=0.704 [0.704,0.704] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(B15         ) XGB  test=   8(   4+) groups= 1  AP=0.500 [0.500,0.500] AUC=0.000 [0.000,0.000] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(B19         ) XGB  test=   2(   2+) groups= 1  AP=1.000 [nan,nan] AUC=nan [nan,nan] F1=1.000 Sens=1.000 Spec=nan Bal=nan Gm=nan
+holdout(MC8051      ) XGB  test=  14(   7+) groups= 1  AP=0.500 [0.500,0.500] AUC=0.500 [0.500,0.500] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(PIC16F84    ) XGB  test=   8(   4+) groups= 1  AP=1.000 [1.000,1.000] AUC=1.000 [1.000,1.000] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(RS232       ) XGB  test=   8(   4+) groups= 1  AP=0.383 [0.383,0.383] AUC=0.000 [0.000,0.000] F1=0.400 Sens=0.500 Spec=0.000 Bal=0.250 Gm=0.000
+holdout(S15850      ) XGB  test=   2(   1+) groups= 1  AP=1.000 [1.000,1.000] AUC=1.000 [1.000,1.000] F1=0.000 Sens=0.000 Spec=1.000 Bal=0.500 Gm=0.000
+holdout(S35932      ) XGB  test=   6(   3+) groups= 1  AP=0.667 [0.667,0.667] AUC=0.667 [0.667,0.667] F1=0.000 Sens=0.000 Spec=1.000 Bal=0.500 Gm=0.000
+holdout(S38417      ) XGB  test=   6(   3+) groups= 1  AP=0.833 [0.833,0.833] AUC=0.833 [0.833,0.833] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(S38584      ) XGB  test=   6(   3+) groups= 1  AP=0.500 [0.500,0.500] AUC=0.500 [0.500,0.500] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(TRIT        ) XGB  test= 911( 899+) groups= 8  AP=0.985 [0.983,0.989] AUC=0.431 [0.373,0.496] F1=0.031 Sens=0.016 Spec=1.000 Bal=0.508 Gm=0.125
+holdout(VGA_LCD     ) XGB  test=   2(   1+) groups= 1  AP=0.500 [0.500,0.500] AUC=0.500 [0.500,0.500] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(WB_CONMAX   ) XGB  test=   6(   3+) groups= 1  AP=0.667 [0.667,0.667] AUC=0.556 [0.556,0.556] F1=0.571 Sens=0.667 Spec=0.333 Bal=0.500 Gm=0.471
+  XGB macro-AUC over 13 framework folds = nan
+holdout(AES         ) MLP  test=  54(  27+) groups= 1  AP=0.500 [0.500,0.500] AUC=0.500 [0.500,0.500] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(B15         ) MLP  test=   8(   4+) groups= 1  AP=1.000 [1.000,1.000] AUC=1.000 [1.000,1.000] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(B19         ) MLP  test=   2(   2+) groups= 1  AP=1.000 [nan,nan] AUC=nan [nan,nan] F1=1.000 Sens=1.000 Spec=nan Bal=nan Gm=nan
+holdout(MC8051      ) MLP  test=  14(   7+) groups= 1  AP=0.500 [0.500,0.500] AUC=0.500 [0.500,0.500] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(PIC16F84    ) MLP  test=   8(   4+) groups= 1  AP=0.365 [0.365,0.365] AUC=0.000 [0.000,0.000] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(RS232       ) MLP  test=   8(   4+) groups= 1  AP=1.000 [1.000,1.000] AUC=1.000 [1.000,1.000] F1=1.000 Sens=1.000 Spec=1.000 Bal=1.000 Gm=1.000
+holdout(S15850      ) MLP  test=   2(   1+) groups= 1  AP=1.000 [1.000,1.000] AUC=1.000 [1.000,1.000] F1=0.000 Sens=0.000 Spec=1.000 Bal=0.500 Gm=0.000
+holdout(S35932      ) MLP  test=   6(   3+) groups= 1  AP=0.383 [0.383,0.383] AUC=0.167 [0.167,0.167] F1=0.000 Sens=0.000 Spec=1.000 Bal=0.500 Gm=0.000
+holdout(S38417      ) MLP  test=   6(   3+) groups= 1  AP=0.633 [0.633,0.633] AUC=0.500 [0.500,0.500] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(S38584      ) MLP  test=   6(   3+) groups= 1  AP=0.833 [0.833,0.833] AUC=0.667 [0.667,0.667] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+holdout(TRIT        ) MLP  test= 911( 899+) groups= 8  AP=0.989 [0.988,0.994] AUC=0.528 [0.515,0.684] F1=0.037 Sens=0.019 Spec=1.000 Bal=0.509 Gm=0.138
+holdout(VGA_LCD     ) MLP  test=   2(   1+) groups= 1  AP=1.000 [1.000,1.000] AUC=1.000 [1.000,1.000] F1=0.000 Sens=0.000 Spec=1.000 Bal=0.500 Gm=0.000
+holdout(WB_CONMAX   ) MLP  test=   6(   3+) groups= 1  AP=0.500 [0.500,0.500] AUC=0.500 [0.500,0.500] F1=0.667 Sens=1.000 Spec=0.000 Bal=0.500 Gm=0.000
+  MLP macro-AUC over 13 framework folds = nan
+
+口径注：非 TRIT 各家族各有自己的插入来源，'框架块'按来源合并 TRIT-TC/TS（共享 TRIT 插入框架）；语料只含两大类插入来源，措辞 bounded by corpus structure。逐折 AUC 由模型族平均仅作汇总，不作显著性主张。

@@ -1,0 +1,15 @@
+E2 子集分解（TRIT vs 非 TRIT），cluster bootstrap n=1000, seed=20261012
+数据源: features_all_v2.csv
+
+E2-TRIT-only       pooled-random-5fold    RF   n= 911 AUC=1.000 [1.000,1.000] Spec=1.000 [1.000,1.000] Sens=1.000 Bal=1.000
+E2-TRIT-only       pooled-random-5fold    XGB  n= 911 AUC=1.000 [1.000,1.000] Spec=1.000 [1.000,1.000] Sens=1.000 Bal=1.000
+E2-TRIT-only       pooled-random-5fold    MLP  n= 911 AUC=0.992 [0.971,1.000] Spec=0.000 [0.000,0.000] Sens=1.000 Bal=0.500
+E2-TRIT-only       group-by-base-5fold    RF   n= 911 AUC=0.999 [0.997,1.000] Spec=1.000 [1.000,1.000] Sens=0.889 Bal=0.944
+E2-TRIT-only       group-by-base-5fold    XGB  n= 911 AUC=0.970 [0.878,1.000] Spec=1.000 [1.000,1.000] Sens=0.899 Bal=0.949
+E2-TRIT-only       group-by-base-5fold    MLP  n= 911 AUC=0.919 [0.720,1.000] Spec=0.500 [0.125,0.875] Sens=0.890 Bal=0.695
+E2-non-TRIT(=E1)   pooled-random-5fold    RF   n= 122 AUC=0.867 [0.455,0.980] Spec=0.733 [0.333,0.940] Sens=0.774 Bal=0.754
+E2-non-TRIT(=E1)   pooled-random-5fold    XGB  n= 122 AUC=0.881 [0.500,0.979] Spec=0.800 [0.425,0.982] Sens=0.758 Bal=0.779
+E2-non-TRIT(=E1)   pooled-random-5fold    MLP  n= 122 AUC=0.876 [0.426,0.979] Spec=0.767 [0.389,0.943] Sens=0.742 Bal=0.754
+E2-non-TRIT(=E1)   group-by-base-5fold    RF   n= 122 AUC=0.601 [0.460,0.788] Spec=0.100 [0.000,0.364] Sens=0.919 Bal=0.510
+E2-non-TRIT(=E1)   group-by-base-5fold    XGB  n= 122 AUC=0.513 [0.468,0.599] Spec=0.050 [0.000,0.261] Sens=0.887 Bal=0.469
+E2-non-TRIT(=E1)   group-by-base-5fold    MLP  n= 122 AUC=0.481 [0.376,0.667] Spec=0.183 [0.030,0.583] Sens=0.887 Bal=0.535

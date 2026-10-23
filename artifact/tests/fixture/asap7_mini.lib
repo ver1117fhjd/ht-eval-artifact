@@ -1,0 +1,30 @@
+/* fixture: minimal ASAP7-style Liberty for test_lib_ops fallback mode */
+library (asap7_mini) {
+  cell (AOI21xp33_ASAP7_75t_R) {
+    pin (A1) { direction : input; }
+    pin (A2) { direction : input; }
+    pin (B)  { direction : input; }
+    pin (Y)  { direction : output; function : "(!A1 * !B) + (!A2 * !B)"; }
+  }
+  cell (OAI21xp33_ASAP7_75t_R) {
+    pin (A1) { direction : input; }
+    pin (A2) { direction : input; }
+    pin (B)  { direction : input; }
+    pin (Y)  { direction : output; function : "(!A1 & !A2) + (!B)"; }
+  }
+  cell (AND2x2_ASAP7_75t_R) {
+    pin (A) { direction : input; }
+    pin (B) { direction : input; }
+    pin (Y) { direction : output; function : "A * B"; }
+  }
+  cell (INVx1_ASAP7_75t_R) {
+    pin (A) { direction : input; }
+    pin (Y) { direction : output; function : "!A"; }
+  }
+  cell (DFFHQx4_ASAP7_75t_R) {
+    ff (IQ, IQN) { next_state : "D"; clocked_on : "CLK"; }
+    pin (D)  { direction : input; }
+    pin (CLK) { direction : input; }
+    pin (Q)  { direction : output; function : "IQ"; }
+  }
+}

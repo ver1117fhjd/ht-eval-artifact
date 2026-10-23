@@ -1,0 +1,21 @@
+R7 库身份探针 + 归因稳定性
+seed=20261012 n_jobs=1
+
+==== ① 库身份探针（LeaveOneGroupOut，组=基准设计）====
+样本 n=297（3 库），组数=6，机会水平=0.333
+  v1: acc=0.899 bal_acc=0.899 macro_f1=0.899（置乱对照 0.360）
+  v2: acc=0.899 bal_acc=0.899 macro_f1=0.899（置乱对照 0.343）
+
+==== ② 归因稳定性（每库 XGB permutation importance，Kendall τ）====
+  v1: mean Kendall τ = 0.276，同库 split-half 天花板 = 0.387
+     asap7      vs nangate45  τ=+0.448 (p=0.006)
+     asap7      vs sky130hd   τ=+0.150 (p=0.346)
+     nangate45  vs sky130hd   τ=+0.229 (p=0.143)
+     top-5 特征（asap7）: frac_complex, cell_class_entropy, frac_seq, frac_other, frac_or
+  v2: mean Kendall τ = 0.057，同库 split-half 天花板 = 0.318
+     asap7      vs nangate45  τ=+0.168 (p=0.241)
+     asap7      vs sky130hd   τ=+0.069 (p=0.611)
+     nangate45  vs sky130hd   τ=-0.067 (p=0.624)
+     top-5 特征（asap7）: frac_complex, cell_class_entropy, frac_op_xor, frac_seq, frac_xor
+
+口径注：探针 3 类机会水平 0.333；归因 τ 越高=跨库归因越可对账。v2 若探针准确率低于 v1 且 τ 高于 v1，即 C2 '库外观↓+可审计归因' 双证据。

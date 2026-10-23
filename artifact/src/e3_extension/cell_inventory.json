@@ -1,0 +1,855 @@
+{
+  "AND2X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "Q"
+    ],
+    "lib_cell": "AND2_X1",
+    "lib_alternatives": [
+      "AND2_X1",
+      "AND2_X2",
+      "AND2_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "AND2X2": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "Q"
+    ],
+    "lib_cell": "AND2_X1",
+    "lib_alternatives": [
+      "AND2_X1",
+      "AND2_X2",
+      "AND2_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "AND3X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "Q"
+    ],
+    "lib_cell": "AND3_X1",
+    "lib_alternatives": [
+      "AND3_X1",
+      "AND3_X2",
+      "AND3_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "AND3X4": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "Q"
+    ],
+    "lib_cell": "AND3_X1",
+    "lib_alternatives": [
+      "AND3_X1",
+      "AND3_X2",
+      "AND3_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "AND4X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "Q"
+    ],
+    "lib_cell": "AND4_X1",
+    "lib_alternatives": [
+      "AND4_X1",
+      "AND4_X2",
+      "AND4_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "AO21X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "Q"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "AO221X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "IN5",
+      "Q"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "AO222X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "IN5",
+      "IN6",
+      "Q"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "AO22X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "Q"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "AOI21X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "QN"
+    ],
+    "lib_cell": "AOI21_X1",
+    "lib_alternatives": [
+      "AOI21_X1",
+      "AOI21_X2",
+      "AOI21_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "AOI221X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "IN5",
+      "QN"
+    ],
+    "lib_cell": "AOI221_X1",
+    "lib_alternatives": [
+      "AOI221_X1",
+      "AOI221_X2",
+      "AOI221_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "AOI222X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "IN5",
+      "IN6",
+      "QN"
+    ],
+    "lib_cell": "AOI222_X1",
+    "lib_alternatives": [
+      "AOI222_X1",
+      "AOI222_X2",
+      "AOI222_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "AOI22X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "QN"
+    ],
+    "lib_cell": "AOI22_X1",
+    "lib_alternatives": [
+      "AOI22_X1",
+      "AOI22_X2",
+      "AOI22_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "DFFARX1": {
+    "pins_observed": [
+      "CLK",
+      "D",
+      "Q",
+      "QN",
+      "RSTB"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "DFFNX2": {
+    "pins_observed": [
+      "CLK",
+      "D",
+      "Q"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "DFFX2": {
+    "pins_observed": [
+      "CLK",
+      "D",
+      "Q",
+      "QN"
+    ],
+    "lib_cell": "DFF_X1",
+    "lib_alternatives": [
+      "DFF_X1",
+      "DFF_X2"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "FADDX1": {
+    "pins_observed": [
+      "A",
+      "B",
+      "CI",
+      "CO",
+      "S"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "HADDX1": {
+    "pins_observed": [
+      "A0",
+      "B0",
+      "C1",
+      "SO"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "INVX0": {
+    "pins_observed": [
+      "IN",
+      "QN"
+    ],
+    "lib_cell": "INV_X1",
+    "lib_alternatives": [
+      "INV_X1",
+      "INV_X2",
+      "INV_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "INVX8": {
+    "pins_observed": [
+      "IN",
+      "QN"
+    ],
+    "lib_cell": "INV_X1",
+    "lib_alternatives": [
+      "INV_X1",
+      "INV_X2",
+      "INV_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "ISOLANDX1": {
+    "pins_observed": [
+      "D",
+      "ISO",
+      "Q"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "LARX1": {
+    "pins_observed": [
+      "CLK",
+      "D",
+      "Q",
+      "QN",
+      "RSTB"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "LSDNENX1": {
+    "pins_observed": [
+      "D",
+      "ENB",
+      "Q"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "LSDNX1": {
+    "pins_observed": [
+      "D",
+      "Q"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "MUX21X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "Q",
+      "S"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "MUX21X2": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "Q",
+      "S"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "MUX41X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "Q",
+      "S0",
+      "S1"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "NAND2X0": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "QN"
+    ],
+    "lib_cell": "NAND2_X1",
+    "lib_alternatives": [
+      "NAND2_X1",
+      "NAND2_X2",
+      "NAND2_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "NAND2X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "QN"
+    ],
+    "lib_cell": "NAND2_X1",
+    "lib_alternatives": [
+      "NAND2_X1",
+      "NAND2_X2",
+      "NAND2_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "NAND3X0": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "QN"
+    ],
+    "lib_cell": "NAND3_X1",
+    "lib_alternatives": [
+      "NAND3_X1",
+      "NAND3_X2",
+      "NAND3_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "NAND3X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "QN"
+    ],
+    "lib_cell": "NAND3_X1",
+    "lib_alternatives": [
+      "NAND3_X1",
+      "NAND3_X2",
+      "NAND3_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "NAND3X4": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "QN"
+    ],
+    "lib_cell": "NAND3_X1",
+    "lib_alternatives": [
+      "NAND3_X1",
+      "NAND3_X2",
+      "NAND3_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "NAND4X0": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "QN"
+    ],
+    "lib_cell": "NAND4_X1",
+    "lib_alternatives": [
+      "NAND4_X1",
+      "NAND4_X2",
+      "NAND4_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "NAND4X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "QN"
+    ],
+    "lib_cell": "NAND4_X1",
+    "lib_alternatives": [
+      "NAND4_X1",
+      "NAND4_X2",
+      "NAND4_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "NBUFFX2": {
+    "pins_observed": [
+      "IN",
+      "Q"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "NOR2X0": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "QN"
+    ],
+    "lib_cell": "NOR2_X1",
+    "lib_alternatives": [
+      "NOR2_X1",
+      "NOR2_X2",
+      "NOR2_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "NOR2X2": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "QN"
+    ],
+    "lib_cell": "NOR2_X1",
+    "lib_alternatives": [
+      "NOR2_X1",
+      "NOR2_X2",
+      "NOR2_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "NOR3X0": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "QN"
+    ],
+    "lib_cell": "NOR3_X1",
+    "lib_alternatives": [
+      "NOR3_X1",
+      "NOR3_X2",
+      "NOR3_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "NOR3X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "QN"
+    ],
+    "lib_cell": "NOR3_X1",
+    "lib_alternatives": [
+      "NOR3_X1",
+      "NOR3_X2",
+      "NOR3_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "NOR4X0": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "QN"
+    ],
+    "lib_cell": "NOR4_X1",
+    "lib_alternatives": [
+      "NOR4_X1",
+      "NOR4_X2",
+      "NOR4_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "NOR4X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "QN"
+    ],
+    "lib_cell": "NOR4_X1",
+    "lib_alternatives": [
+      "NOR4_X1",
+      "NOR4_X2",
+      "NOR4_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "OA21X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "Q"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "OA221X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "IN5",
+      "Q"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "OA222X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "IN5",
+      "IN6",
+      "Q"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "OA22X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "Q"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "OAI21X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "QN"
+    ],
+    "lib_cell": "OAI21_X1",
+    "lib_alternatives": [
+      "OAI21_X1",
+      "OAI21_X2",
+      "OAI21_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "OAI221X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "IN5",
+      "QN"
+    ],
+    "lib_cell": "OAI221_X1",
+    "lib_alternatives": [
+      "OAI221_X1",
+      "OAI221_X2",
+      "OAI221_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "OAI222X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "IN5",
+      "IN6",
+      "QN"
+    ],
+    "lib_cell": "OAI222_X1",
+    "lib_alternatives": [
+      "OAI222_X1",
+      "OAI222_X2",
+      "OAI222_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "OAI22X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "QN"
+    ],
+    "lib_cell": "OAI22_X1",
+    "lib_alternatives": [
+      "OAI22_X1",
+      "OAI22_X2",
+      "OAI22_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "OR2X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "Q"
+    ],
+    "lib_cell": "OR2_X1",
+    "lib_alternatives": [
+      "OR2_X1",
+      "OR2_X2",
+      "OR2_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "OR3X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "Q"
+    ],
+    "lib_cell": "OR3_X1",
+    "lib_alternatives": [
+      "OR3_X1",
+      "OR3_X2",
+      "OR3_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "OR4X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4",
+      "Q"
+    ],
+    "lib_cell": "OR4_X1",
+    "lib_alternatives": [
+      "OR4_X1",
+      "OR4_X2",
+      "OR4_X4"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "SDFFARX1": {
+    "pins_observed": [
+      "CLK",
+      "D",
+      "Q",
+      "QN",
+      "RSTB",
+      "SE",
+      "SI"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "SDFFX1": {
+    "pins_observed": [
+      "CLK",
+      "D",
+      "Q",
+      "QN",
+      "SE",
+      "SI"
+    ],
+    "lib_cell": "SDFF_X1",
+    "lib_alternatives": [
+      "SDFF_X1",
+      "SDFF_X2"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "XNOR2X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "Q"
+    ],
+    "lib_cell": "XNOR2_X1",
+    "lib_alternatives": [
+      "XNOR2_X1",
+      "XNOR2_X2"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "XNOR3X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "Q"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  },
+  "XOR2X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "Q"
+    ],
+    "lib_cell": "XOR2_X1",
+    "lib_alternatives": [
+      "XOR2_X1",
+      "XOR2_X2"
+    ],
+    "has_function": true,
+    "ff": null
+  },
+  "XOR3X1": {
+    "pins_observed": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "Q"
+    ],
+    "lib_cell": null,
+    "lib_alternatives": [],
+    "has_function": false,
+    "ff": null
+  }
+}

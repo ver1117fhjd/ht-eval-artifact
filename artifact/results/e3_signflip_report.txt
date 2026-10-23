@@ -1,0 +1,32 @@
+R7 E3 精确 sign-flip 检验 + 逐组表
+数据源: PROJECT_ROOT\experiments\synth_work\features_multilib_v2.csv（v2，显式钉死）seed=20261012 n_jobs=1
+n=264 pos=132 组数=5 组=['AES:AES', 'MC8051:MC8051', 'PIC16F84:PIC16F84', 'RS232:RS232', 'WB_CONMAX:wb_conmax'] 库=['asap7', 'nangate45', 'sky130hd']
+
+==== RF ====
+  AES:AES      n=162 (+81/- 81) AUC pooled=1.000 LOLO=0.768 Spec@0.5=0.519 Sens@0.5=1.000
+  MC8051:MC8051 n= 42 (+21/- 21) AUC pooled=0.170 LOLO=0.500 Spec@0.5=0.333 Sens@0.5=0.667
+  PIC16F84:PIC16F84 n= 24 (+12/- 12) AUC pooled=0.979 LOLO=0.611 Spec@0.5=0.333 Sens@0.5=0.583
+  RS232:RS232  n= 24 (+12/- 12) AUC pooled=1.000 LOLO=0.778 Spec@0.5=0.667 Sens@0.5=0.833
+  WB_CONMAX:wb_conmax n= 12 (+6/-  6) AUC pooled=0.306 LOLO=0.667 Spec@0.5=0.333 Sens@0.5=1.000
+  ΔAUC(pooled−LOLO) 逐组: +0.232, -0.330, +0.368, +0.222, -0.361
+  精确 sign-flip（2^5=32 枚举）p = 0.8750
+
+==== XGB ====
+  AES:AES      n=162 (+81/- 81) AUC pooled=1.000 LOLO=0.667 Spec@0.5=0.333 Sens@0.5=0.840
+  MC8051:MC8051 n= 42 (+21/- 21) AUC pooled=0.170 LOLO=0.500 Spec@0.5=0.333 Sens@0.5=0.667
+  PIC16F84:PIC16F84 n= 24 (+12/- 12) AUC pooled=0.979 LOLO=0.472 Spec@0.5=0.333 Sens@0.5=0.667
+  RS232:RS232  n= 24 (+12/- 12) AUC pooled=1.000 LOLO=0.861 Spec@0.5=0.333 Sens@0.5=0.833
+  WB_CONMAX:wb_conmax n= 12 (+6/-  6) AUC pooled=0.556 LOLO=0.556 Spec@0.5=0.333 Sens@0.5=0.667
+  ΔAUC(pooled−LOLO) 逐组: +0.333, -0.330, +0.507, +0.139, +0.000
+  精确 sign-flip（2^5=32 枚举）p = 0.3750
+
+==== MLP ====
+  AES:AES      n=162 (+81/- 81) AUC pooled=0.991 LOLO=0.471 Spec@0.5=0.000 Sens@0.5=1.000
+  MC8051:MC8051 n= 42 (+21/- 21) AUC pooled=0.213 LOLO=0.500 Spec@0.5=0.333 Sens@0.5=0.667
+  PIC16F84:PIC16F84 n= 24 (+12/- 12) AUC pooled=0.972 LOLO=0.611 Spec@0.5=0.333 Sens@0.5=0.667
+  RS232:RS232  n= 24 (+12/- 12) AUC pooled=1.000 LOLO=0.611 Spec@0.5=0.333 Sens@0.5=0.667
+  WB_CONMAX:wb_conmax n= 12 (+6/-  6) AUC pooled=0.111 LOLO=0.556 Spec@0.5=0.333 Sens@0.5=0.667
+  ΔAUC(pooled−LOLO) 逐组: +0.519, -0.287, +0.361, +0.389, -0.444
+  精确 sign-flip（2^5=32 枚举）p = 0.5625
+
+口径注：H0=逐组 ΔAUC 对称于 0；n_groups=5，2^5=32 枚举为精确检验，不依赖大样本近似；cluster bootstrap CI（<10 clusters 反保守）只作区间参考，显著性以此检验为准。

@@ -1,0 +1,30 @@
+\begin{table}[t]
+\centering
+\caption{Per-family XGBoost performance (v2 features) under the leaky pooled protocol vs.\ leave-one-family-out (LOFO). Pooled scores slice the predictions of the pooled 5-fold run, where sibling variants of the same base design occur on both sides of the split; LOFO holds out the entire family. Even family-level LOFO is not leak-free for TRIT: TRIT-TC and TRIT-TS share eight base designs, so a held-out TC fold still sees same-design TS variants in training. Families with fewer than six rows (B19, S15850, VGA\_LCD) are noise-dominated and excluded from the macro averages.}
+\label{tab:family}
+\small
+\begin{tabular}{lcccccccc}
+\toprule
+& \multicolumn{4}{c}{E1 (paired, balanced)} & \multicolumn{4}{c}{E2 (full, imbalanced)} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+Family & \#pos & AUC$_{pool}$ & AUC$_{LOFO}$ & AP$_{LOFO}$ & \#pos & AUC$_{pool}$ & AUC$_{LOFO}$ & AP$_{LOFO}$ \\
+\midrule
+AES & 27 & 1.00 & 0.43 & 0.68 & 27 & 1.00 & 0.44 & 0.66 \\
+B15 & 4 & 1.00 & 0.00 & 0.50 & 4 & 1.00 & 0.00 & 0.50 \\
+B19 & 2 & --- & --- & 1.00 & 2 & --- & --- & 1.00 \\
+MC8051 & 7 & 0.27 & 0.50 & 0.50 & 7 & 0.26 & 0.50 & 0.50 \\
+PIC16F84 & 4 & 1.00 & 0.75 & 0.88 & 4 & 1.00 & 0.50 & 0.75 \\
+RS232 & 4 & 0.25 & 0.25 & 0.58 & 4 & 1.00 & 0.00 & 0.39 \\
+S15850 & 1 & 0.00 & 1.00 & 1.00 & 1 & 0.00 & 0.00 & 0.50 \\
+S35932 & 3 & 0.67 & 0.67 & 0.67 & 3 & 0.67 & 0.67 & 0.67 \\
+S38417 & 3 & 0.72 & 0.83 & 0.83 & 3 & 0.72 & 0.83 & 0.83 \\
+S38584 & 3 & 0.67 & 1.00 & 1.00 & 3 & 1.00 & 0.50 & 0.63 \\
+TRIT-TC & --- & --- & --- & --- & 580 & 1.00 & 1.00 & 1.00 \\
+TRIT-TS & --- & --- & --- & --- & 319 & 1.00 & 1.00 & 1.00 \\
+VGA\_LCD & 1 & 0.00 & 0.50 & 0.50 & 1 & 0.00 & 0.50 & 0.50 \\
+WB\_CONMAX & 3 & 0.33 & 0.44 & 0.48 & 3 & 0.00 & 0.56 & 0.67 \\
+\midrule
+Macro ($n\geq 6$) & --- & 0.66 & 0.54 & 0.68 & --- & 0.79 & 0.55 & 0.69 \\
+\bottomrule
+\end{tabular}
+\end{table}
