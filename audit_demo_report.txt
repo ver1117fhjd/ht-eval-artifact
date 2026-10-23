@@ -1,0 +1,35 @@
+R8 C13 审计工作流演示：cone(2) 算子预算差 → top-k vs 真实木马体
+评分=算子预算 L1 差（库无关），评真=TROJAN BODY 实例名；随机基线=期望 hit@k
+
+c2670_T000         cells=  342 body= 4 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.057
+c2670_T001         cells=  343 body= 5 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.071
+c2670_T002         cells=  343 body= 5 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.071
+c2670_T003         cells=  342 body= 4 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.057
+c2670_T004         cells=  344 body= 6 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.085
+c2670_T005         cells=  344 body= 6 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.085
+c3540_T000         cells=  632 body= 6 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.047
+c3540_T001         cells=  632 body= 6 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.047
+c3540_T002         cells=  631 body= 5 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.039
+c3540_T003         cells=  630 body= 4 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.031
+c3540_T004         cells=  630 body= 4 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.031
+c3540_T005         cells=  634 body= 8 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.062
+c5315_T000         cells= 1545 body= 5 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.016
+c5315_T001         cells= 1547 body= 7 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.022
+c5315_T002         cells= 1545 body= 5 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.016
+c5315_T003         cells= 1545 body= 5 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.016
+c5315_T004         cells= 1546 body= 6 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.019
+c5315_T005         cells= 1545 body= 5 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.016
+c6288_T000         cells= 2423 body= 7 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.014
+c6288_T001         cells= 2421 body= 5 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.010
+c6288_T002         cells= 2420 body= 4 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.008
+c6288_T003         cells= 2419 body= 3 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.006
+c6288_T004         cells= 2418 body= 2 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.004
+c6288_T005         cells= 2420 body= 4 first_body_rank=   1 hit@1=1 hit@5=1 hit@10=1 rand@5=0.008
+
+==== 汇总（24 pairs）====
+hit@1: 24/24 = 1.000 （随机基线均值 0.007）
+hit@5: 24/24 = 1.000 （随机基线均值 0.035）
+hit@10: 24/24 = 1.000 （随机基线均值 0.069）
+MRR = 1.000
+
+口径注：评分不含'单元是否新增'这类名字级信息——新增单元的锥预算差自然非零，触发锥内的共享单元因锥预算变化同样被顶上来；单元名仅用于事后评真。演示设置=有金样参考的审计（lab/可信孪生场景）。

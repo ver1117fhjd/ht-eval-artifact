@@ -1,0 +1,21 @@
+R7 可解性正对照（oracle 特征）
+数据源: PROJECT_ROOT\experiments\synth_work\features_all_v2.csv（v2，显式钉死）seed=20261012 n_jobs=1
+
+==== ① TRIT log oracle（特权特征），group-by-base ====
+TRIT 子集 n=911 pos=899 groups=12 特征=['o_n_trojans', 'o_is_seq', 'o_n_trigger', 'o_n_effect', 'o_n_body_cells']
+  RF   AP=1.000 AUC=1.000 [1.000,1.000] Sens=1.000 Spec=1.000 Bal=1.000
+  XGB  AP=1.000 AUC=1.000 [1.000,1.000] Sens=1.000 Spec=1.000 Bal=1.000
+  MLP  AP=1.000 AUC=1.000 [1.000,1.000] Sens=1.000 Spec=1.000 Bal=1.000
+
+==== ② E1 配对差分 oracle（特权配对信息），group-by-base ====
+E1 n=122 pos=62 groups=12 配对数=60（差分特征 32 维）
+  RF   AP=0.920 AUC=0.872 [0.679,0.995] Sens=0.629 Spec=1.000 Bal=0.815
+  XGB  AP=0.856 AUC=0.828 [0.662,0.984] Sens=0.565 Spec=1.000 Bal=0.782
+  MLP  AP=0.780 AUC=0.626 [0.500,0.947] Sens=0.516 Spec=1.000 Bal=0.758
+
+==== ③ 标签置乱对照（E1 grouped，1 seed）应 ≈ 随机 ====
+  RF   AUC=0.488 Bal=0.480
+  XGB  AUC=0.476 Bal=0.462
+  MLP  AUC=0.582 Bal=0.571
+
+解读口径：①/② 可分 = 协议在特权信号存在时测得出，near-chance 是语料/特征下限而非协议 bug；③ ≈0.5 = grouped 协议无虚高。

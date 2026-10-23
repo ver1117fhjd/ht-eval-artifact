@@ -1,0 +1,5 @@
+E1 pairs: N=122 (gold=60, trojan=62), base designs=12
+PCA explained variance: PC1=0.502, PC2=0.155, cum=0.657
+Nearest-neighbor same-base rate (full feature space): 1.000  (random chance=0.232, lift=4.3x)
+Mean distance: intra-base=0.68 vs inter-base=8.69 (ratio=0.079)
+Gold->trojan sibling pairs (n=864): median dist=0.64 vs random pairs median=7.25

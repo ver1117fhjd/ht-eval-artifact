@@ -1,0 +1,21 @@
+framework-disjoint 特征归一化试探（E2 语料；TRIT 911 行 / pairs 122 行）
+注：zs-per-group 是 transductive（用整族统计量），只在审计场景成立
+
+model                          MLP     RF    XGB
+feats         protocol                          
+all-32        TRIT grouped   0.919  0.999  0.970
+              TRIT->pairs    0.500  0.519  0.485
+              pairs grouped  0.481  0.601  0.513
+              pairs->TRIT    0.576  0.103  0.078
+geometry-only TRIT grouped   0.912  0.984  0.930
+              TRIT->pairs    0.507  0.510  0.501
+              pairs grouped  0.535  0.543  0.455
+              pairs->TRIT    0.436  0.052  0.187
+profile-only  TRIT grouped   0.913  0.997  0.984
+              TRIT->pairs    0.501  0.397  0.438
+              pairs grouped  0.425  0.592  0.516
+              pairs->TRIT    0.259  0.561  0.945
+zs-per-group  TRIT grouped   0.999  1.000  1.000
+              TRIT->pairs    0.399  0.387  0.307
+              pairs grouped  0.693  0.570  0.535
+              pairs->TRIT    0.189  0.118  0.132

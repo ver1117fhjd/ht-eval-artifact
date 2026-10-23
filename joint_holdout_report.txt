@@ -1,0 +1,8 @@
+design × library 联合留出（R3/R4 整改 P1-7）
+数据源: results/features_multilib_v2.csv
+test=设计d@库L 每行；train=其他设计×其他两库（设计轴+库轴双隔离）
+CI=cluster bootstrap 1000，聚类=base design
+
+RF   n= 264 AUC=0.466 [0.441,0.520] AP=0.498 [0.488,0.544] Spec=0.265 [0.000,0.415] Bal=0.496
+XGB  n= 264 AUC=0.513 [0.493,0.616] AP=0.509 [0.493,0.607] Spec=0.750 [0.123,0.969] Bal=0.538
+MLP  n= 264 AUC=0.491 [0.478,0.560] AP=0.488 [0.482,0.537] Spec=0.432 [0.299,0.759] Bal=0.500

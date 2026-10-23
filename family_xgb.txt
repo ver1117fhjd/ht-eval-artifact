@@ -1,0 +1,9 @@
+[E1] n=122 pos=62 families=12
+  总体 pooled: AP=0.886 AUC=0.881
+  总体 LOFO : AP=0.575 AUC=0.506
+[E2] n=1033 pos=961 families=14
+  总体 pooled: AP=1.000 AUC=0.994
+  总体 LOFO : AP=0.994 AUC=0.921
+
+CSV: experiments\c2\family_xgb.csv
+TeX: experiments\c2\family_xgb.tex

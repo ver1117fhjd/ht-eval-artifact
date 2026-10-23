@@ -1,0 +1,7 @@
+HW2VEC/GNN4TJ 协议阶梯重打分（E1 配对集）
+graphs=87 pos=45 epochs=200 seeds=2
+
+pooled-random-5fold        AUC 0.491+-0.046 (n=2) Spec 0.619
+group-by-variant-5fold     AUC 0.611+-0.007 (n=2) Spec 0.690
+group-by-base-5fold        AUC 0.536+-0.037 (n=2) Spec 0.726
+leave-one-family-out       AUC 0.546+-0.032 (n=2) Spec 0.679
