@@ -62,7 +62,7 @@ class bias is toward golden designs, not toward Trojan discrimination.
 
 ## 5. How to re-run
 
-    git clone https://github.com/AICPS/hw2vec tools/hw2vec      # checkout at tools/
+    git clone http<local-path> tools/hw2vec      # checkout at tools/
     python tools/hw2vec_ladder/prep_corpus.py                   # corpus -> whole pairs
     python tools/hw2vec_ladder/extract_graphs.py                # AST graphs -> cache
     python tools/hw2vec_ladder/run_ladder.py                    # 4 rungs x 2 seeds

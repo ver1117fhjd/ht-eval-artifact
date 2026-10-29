@@ -6,12 +6,12 @@ import sys
 import time
 from pathlib import Path
 
-sys.path.insert(0, r"D:/10.7/tools/hw2vec")
+sys.path.insert(0, r"PROJECT_ROOT/tools/hw2vec")
 from hw2vec.hw2graph import HW2GRAPH
 from hw2vec.config import Config
 
 d = Path(sys.argv[1])
-YAML = r"D:/10.7/tools/hw2vec/examples/example_gnn4tj.yaml"
+YAML = r"PROJECT_ROOT/tools/hw2vec/examples/example_gnn4tj.yaml"
 t0 = time.time()
 cfg = Config(["--yaml_path", YAML])
 cfg.graph_type = sys.argv[2] if len(sys.argv) > 2 else "DFG"

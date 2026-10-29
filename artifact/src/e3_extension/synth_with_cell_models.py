@@ -11,20 +11,20 @@ import subprocess
 import sys
 import time
 
-ROOT = r"D:\10.7"
+ROOT = r"PROJECT_ROOT"
 WORK = os.path.join(ROOT, "experiments", "synth_work")
 E3X = os.path.join(ROOT, "experiments", "e3x")
 MODELS = os.path.join(E3X, "stub_models.v")
-YOSYS = r"E:\oss-cad-suite\bin\yosys.exe"
+YOSYS = r"<local-path>"
 
 sys.path.insert(0, os.path.join(ROOT, "paper", "host2027", "artifact", "src"))
 from run_yosys_synth import extract  # noqa: E402
 
 LIBS = {
-    "nangate45": (r"D:\10.7\libs\liberty\nangate45\NangateOpenCellLibrary_typical.lib", None),
-    "sky130hd": (r"D:\10.7\libs\liberty\sky130hd\sky130_fd_sc_hd__tt_025C_1v80.lib", None),
-    "asap7": (r"D:\10.7\libs\liberty\asap7\asap7_RVT_TT_merged.lib",
-              r"D:\10.7\libs\liberty\asap7\asap7_RVT_TT_comb.lib"),
+    "nangate45": (r"PROJECT_ROOT\libs\liberty\nangate45\NangateOpenCellLibrary_typical.lib", None),
+    "sky130hd": (r"PROJECT_ROOT\libs\liberty\sky130hd\sky130_fd_sc_hd__tt_025C_1v80.lib", None),
+    "asap7": (r"PROJECT_ROOT\libs\liberty\asap7\asap7_RVT_TT_merged.lib",
+              r"PROJECT_ROOT\libs\liberty\asap7\asap7_RVT_TT_comb.lib"),
 }
 
 

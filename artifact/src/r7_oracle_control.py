@@ -43,9 +43,9 @@ def parse_log(path):
     """log.txt → oracle 特征 dict。解析失败返回 None。"""
     txt = Path(path).read_text(encoding="utf-8", errors="ignore")
     feats = {}
-    m = re.search(r"Number of Trojans:\s*(\d+)", txt)
+    m = re.search(r"Number of Trojan<local-path>)", txt)
     feats["o_n_trojans"] = int(m.group(1)) if m else 1
-    m = re.search(r"Type:\s*(\w+)", txt)
+    m = re.search(r"Typ<local-path>)", txt)
     t = (m.group(1).lower() if m else "combinational")
     feats["o_is_seq"] = 1.0 if "seq" in t else 0.0
     m = re.search(r"Activation Condition:.*?\n(.*?)\*{3,}", txt, re.S)
@@ -54,7 +54,7 @@ def parse_log(path):
     m = re.search(r"Effect:.*?\n(.*?)Activation", txt, re.S)
     eff = m.group(1) if m else ""
     feats["o_n_effect"] = float(len(eff.split()))
-    m = re.search(r"TROJAN BODY:\s*\n(.*?)\n-{5,}", txt, re.S)
+    m = re.search(r"TROJAN BOD<local-path>)\n-{5,}", txt, re.S)
     body = m.group(1) if m else ""
     n_inst = len(re.findall(r"\)\s*;", body))
     feats["o_n_body_cells"] = float(n_inst)

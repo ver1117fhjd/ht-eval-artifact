@@ -8,7 +8,7 @@ import subprocess
 import zipfile
 
 ROOT = r"./data\Trust-Hub\chip-level-trojan"
-UNRAR = os.environ.get("UNRAR", r"C:\Program Files\WinRAR\UnRAR.exe")  # override via env var
+UNRAR = os.environ.get("UNRAR", r"<local-path> Files\WinRAR\UnRAR.exe")  # override via env var
 
 ok, fail, rar_ok, rar_fail = 0, 0, 0, 0
 

@@ -17,7 +17,7 @@ import shutil
 import argparse
 import subprocess
 
-YOSYS = os.environ.get("YOSYS", r"E:\oss-cad-suite\bin\yosys.exe")  # override via env var
+YOSYS = os.environ.get("YOSYS", r"<local-path>")  # override via env var
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from netlist_features import extract  # noqa: E402
 

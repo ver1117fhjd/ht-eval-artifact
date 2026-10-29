@@ -7,7 +7,7 @@ import itertools
 import sys
 from pathlib import Path
 
-ROOT = Path(r"D:\10.7")
+ROOT = Path(r"PROJECT_ROOT")
 SRC = ROOT / "paper" / "host2027" / "artifact" / "src"
 sys.path.insert(0, str(SRC))
 import numpy as np

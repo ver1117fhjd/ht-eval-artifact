@@ -2,7 +2,7 @@ R7 可解性正对照（oracle 特征）
 数据源: PROJECT_ROOT\experiments\synth_work\features_all_v2.csv（v2，显式钉死）seed=20261012 n_jobs=1
 
 ==== ① TRIT log oracle（特权特征），group-by-base ====
-TRIT 子集 n=911 pos=899 groups=12 特征=['o_n_trojans', 'o_is_seq', 'o_n_trigger', 'o_n_effect', 'o_n_body_cells']
+TRIT 子集 n=911 pos=899 groups=8 特征=['o_n_trojans', 'o_is_seq', 'o_n_trigger', 'o_n_effect', 'o_n_body_cells']
   RF   AP=1.000 AUC=1.000 [1.000,1.000] Sens=1.000 Spec=1.000 Bal=1.000
   XGB  AP=1.000 AUC=1.000 [1.000,1.000] Sens=1.000 Spec=1.000 Bal=1.000
   MLP  AP=1.000 AUC=1.000 [1.000,1.000] Sens=1.000 Spec=1.000 Bal=1.000

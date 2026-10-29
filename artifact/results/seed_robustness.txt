@@ -1,18 +1,18 @@
 3-seed robustness (seeds=20261012/1/2), XGB/RF/MLP
-features: features_all_v2.csv (bundled in results/)
+features: results/features_all_v2.csv
 AUC mean [min-max] | Spec mean [min-max]
 
 E1  pooled         RF   AUC 0.877 [0.867-0.884]  Spec 0.739 [0.717-0.767]
-E1  pooled         XGB  AUC 0.871 [0.850-0.883]  Spec 0.789 [0.717-0.850]
+E1  pooled         XGB  AUC 0.872 [0.851-0.883]  Spec 0.789 [0.717-0.850]
 E1  pooled         MLP  AUC 0.830 [0.786-0.876]  Spec 0.722 [0.683-0.767]
 E1  group-by-base  RF   AUC 0.569 [0.521-0.601]  Spec 0.139 [0.100-0.167]
-E1  group-by-base  XGB  AUC 0.556 [0.489-0.626]  Spec 0.128 [0.117-0.133]
+E1  group-by-base  XGB  AUC 0.554 [0.513-0.610]  Spec 0.100 [0.050-0.133]
 E1  group-by-base  MLP  AUC 0.491 [0.481-0.497]  Spec 0.156 [0.117-0.183]
-E2  pooled         RF   AUC 0.994 [0.993-0.994]  Spec 0.782 [0.736-0.819]
-E2  pooled         XGB  AUC 0.994 [0.994-0.995]  Spec 0.819 [0.778-0.875]
-E2  pooled         MLP  AUC 0.964 [0.934-0.980]  Spec 0.648 [0.625-0.667]
-E2  group-by-base  RF   AUC 0.787 [0.758-0.813]  Spec 0.264 [0.208-0.306]
-E2  group-by-base  XGB  AUC 0.828 [0.762-0.867]  Spec 0.250 [0.208-0.278]
-E2  group-by-base  MLP  AUC 0.553 [0.526-0.596]  Spec 0.176 [0.139-0.236]
+E2  pooled         RF   AUC 0.987 [0.981-0.990]  Spec 0.630 [0.569-0.694]
+E2  pooled         XGB  AUC 0.976 [0.961-0.992]  Spec 0.750 [0.694-0.833]
+E2  pooled         MLP  AUC 0.908 [0.875-0.925]  Spec 0.611 [0.569-0.653]
+E2  group-by-base  RF   AUC 0.761 [0.701-0.813]  Spec 0.139 [0.069-0.222]
+E2  group-by-base  XGB  AUC 0.465 [0.414-0.534]  Spec 0.171 [0.139-0.222]
+E2  group-by-base  MLP  AUC 0.466 [0.303-0.703]  Spec 0.185 [0.083-0.278]
 
 判读口径：pooled→grouped 落差 vs 同格 seed 极差。

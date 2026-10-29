@@ -132,3 +132,28 @@ unique vector and exits non-zero.
 The golden rows in `results/features_all.csv` and `results/features_all_v2.csv`
 have been regenerated with one synthesis per original design
 (`hierarchy -top <module>`); variants are unchanged.
+
+## Regeneration of dependent results (2026-10-29) — COMPLETE
+
+Every result file that was computed from the pre-correction matrices has been
+re-run from the corrected `results/features_all_v2.csv` (grouping key: base
+design with `scan` suffix merged, 20 groups on E2). See the provenance table in
+`README.md` for the per-file status. Summary of this round:
+
+- `perm_test_report.txt`: E2 now carries both XGB and RF rows and matches
+  Table IV point values exactly (XGB grouped obs=0.446, RF grouped obs=0.701).
+- `lit_baseline_report.txt`: E1 rows reproduce the earlier run byte-for-byte;
+  E2 grouped DT+PCA moves 0.46 -> 0.39 (cited in Sec. V-E).
+- `e2_subset_*` (3 seeds): TRIT-only group-by-base RF = 0.693/0.643/0.655,
+  backing Sec. V-B's "0.64-0.69 across seeds for RF".
+- `seed_robustness.txt`: grouped-cell three-seed spread 0.11 (RF) / 0.12
+  (XGBoost) / 0.40 (MLP) — Table IV caption and Sec. VII quote these.
+- `family_xgb.*`: macro (n>=6) pooled 0.66/0.75, LOFO 0.54/0.59; micro LOFO
+  E2 = 0.45; TRIT-TC/TS LOFO = 0.72/1.00 — Sec. V-C quotes these.
+- `m5_fingerprint.txt` (new): golden rows collapse to 12-13 unique fingerprints
+  at every granularity (fine cell-type multiset 12, netlist hash 13; AES 27
+  rows: one and two), backing Sec. III-B's corpus-property claim.
+
+Sanity anchor: the rerun reproduces every Table III/IV point value from
+`results/c1_results.csv` (pooled 0.881/0.961, grouped 0.601/0.701 for RF,
+0.513/0.446 for XGB on E1/E2 respectively).

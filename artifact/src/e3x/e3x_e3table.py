@@ -15,7 +15,7 @@ from sklearn.model_selection import StratifiedKFold, cross_val_predict
 from xgboost import XGBClassifier
 import re
 
-ROOT = Path(r"D:\10.7")
+ROOT = Path(r"PROJECT_ROOT")
 import os
 EXT = Path(os.environ.get("E3_EXT",
            ROOT / "experiments" / "e3x" / "features_multilib_v2_ext.csv"))

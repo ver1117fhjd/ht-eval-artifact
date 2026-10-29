@@ -3,9 +3,9 @@ import os
 import subprocess
 import tempfile
 
-OUT = r"D:\10.7\experiments\e3x"
-IVERILOG = r"E:\oss-cad-suite\bin\iverilog.exe"
-VVP = r"E:\oss-cad-suite\bin\vvp.exe"
+OUT = r"PROJECT_ROOT\experiments\e3x"
+IVERILOG = r"<local-path>"
+VVP = r"<local-path>"
 MODELS = os.path.join(OUT, "stub_models.v")
 
 CASES = {

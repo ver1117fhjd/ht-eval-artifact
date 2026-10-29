@@ -1,5 +1,5 @@
 permutation test（R5-M5，打乱标签 null 分布）
-数据源: results/features_all_v2.csv
+数据源: PROJECT_ROOT\experiments\synth_work\features_all_v2.csv
 n_perm=100, seed=20261012, 5-fold CV 同主协议
 p 值=|null-0.5| >= |obs-0.5| 的双侧比例（+1 校正）
 
@@ -7,5 +7,7 @@ E1-pairs   XGB  pooled         obs=0.881 null=[0.370,0.668] (mean 0.518) p=0.009
 E1-pairs   XGB  group-by-base  obs=0.513 null=[0.383,0.616] (mean 0.493) p=0.8218
 E1-pairs   RF   pooled         obs=0.867 null=[0.358,0.654] (mean 0.512) p=0.0099
 E1-pairs   RF   group-by-base  obs=0.601 null=[0.400,0.605] (mean 0.496) p=0.0693
-E2-full    XGB  pooled         obs=0.994 null=[0.411,0.588] (mean 0.493) p=0.0099
-E2-full    XGB  group-by-base  obs=0.863 null=[0.431,0.545] (mean 0.493) p=0.0099
+E2-full    XGB  pooled         obs=0.961 null=[0.405,0.585] (mean 0.495) p=0.0099
+E2-full    XGB  group-by-base  obs=0.446 null=[0.427,0.554] (mean 0.496) p=0.1287
+E2-full    RF   pooled         obs=0.981 null=[0.400,0.581] (mean 0.495) p=0.0099
+E2-full    RF   group-by-base  obs=0.701 null=[0.399,0.551] (mean 0.486) p=0.0099

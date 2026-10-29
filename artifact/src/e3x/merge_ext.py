@@ -3,7 +3,7 @@ report column compatibility before analysis."""
 import pandas as pd
 from pathlib import Path
 
-ROOT = Path(r"D:\10.7")
+ROOT = Path(r"PROJECT_ROOT")
 ORIG = ROOT / "experiments" / "synth_work" / "features_multilib_v2.csv"
 EXT = ROOT / "experiments" / "e3x" / "features_multilib_ext.csv"
 OUT = ROOT / "experiments" / "e3x" / "features_multilib_v2_ext.csv"

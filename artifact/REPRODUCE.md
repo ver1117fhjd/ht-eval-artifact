@@ -69,7 +69,7 @@ The scripts carry the machine's absolute `ROOT`; set it to your checkout first.
 
 Reported, not regenerated from this package (level iii of the paper's artifact
 statement). The framework is an external checkout
-(`git clone https://github.com/AICPS/hw2vec tools/hw2vec`); the driver is
+(`git clone http<local-path> tools/hw2vec`); the driver is
 `tools/hw2vec_ladder/`:
 
 1. `prep_corpus.py` — E1 pairs from the cleaned netlists, **whole pairs excluded

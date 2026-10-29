@@ -8,7 +8,7 @@
 本脚本给 null 分布：打乱标签后在 group-by-base / pooled 协议下重跑，
 得到 AUC 的零分布，检验观测值是否可由"标签无信息"解释。
 
-用法：D:/10.7/.venv/Scripts/python.exe src/permutation_test.py [--n-perm 100]
+用法：PROJECT_ROOT/.venv/Scripts/python.exe src/permutation_test.py [--n-perm 100]
 输出：experiments/c2/perm_test_report.txt / perm_test_results.csv
 """
 import argparse
@@ -57,7 +57,7 @@ def main():
     rows = []
     for exp, loader, models in (
             ("E1-pairs", c1.load_pairs, ("XGB", "RF")),
-            ("E2-full", c1.load_full, ("XGB",))):
+            ("E2-full", c1.load_full, ("XGB", "RF"))):
         df = loader()
         X = df[c1.feature_cols(df)].values
         y = df["label"].values

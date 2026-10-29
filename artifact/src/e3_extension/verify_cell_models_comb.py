@@ -15,10 +15,10 @@ import re
 import subprocess
 import tempfile
 
-OUT = r"D:\10.7\experiments\e3x"
-IVERILOG = r"E:\oss-cad-suite\bin\iverilog.exe"
-VVP = r"E:\oss-cad-suite\bin\vvp.exe"
-LIB = r"D:\10.7\libs\liberty\nangate45\NangateOpenCellLibrary_typical.lib"
+OUT = r"PROJECT_ROOT\experiments\e3x"
+IVERILOG = r"<local-path>"
+VVP = r"<local-path>"
+LIB = r"PROJECT_ROOT\libs\liberty\nangate45\NangateOpenCellLibrary_typical.lib"
 
 src = open(os.path.join(OUT, "stub_models.v"), encoding="utf-8").read()
 report = json.load(open(os.path.join(OUT, "cell_models_report.json"), encoding="utf-8"))

@@ -7,7 +7,7 @@ import traceback
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from e3x_synth import run  # noqa: E402
 
-E3X = r"D:\10.7\experiments\e3x"
+E3X = r"PROJECT_ROOT\experiments\e3x"
 LOG = os.path.join(E3X, "batch.log")
 
 JOBS = []

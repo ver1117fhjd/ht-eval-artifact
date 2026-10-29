@@ -1,12 +1,14 @@
-E2 子集分解（TRIT vs 非 TRIT），cluster bootstrap n=1000, seed=20261012
-数据源: features_all_v2.csv
+E2 subset decomposition (seed=20261012, corrected golden class)
+source: results/features_all_v2.csv (2026-10-23 golden-class correction)
+cluster bootstrap n=1000; splitter = 5-fold group-by-base (20 groups)
 
-E2-TRIT-only       pooled-random-5fold    RF   n= 911 AUC=1.000 [1.000,1.000] Spec=1.000 [1.000,1.000] Sens=1.000 Bal=1.000
-E2-TRIT-only       pooled-random-5fold    XGB  n= 911 AUC=1.000 [1.000,1.000] Spec=1.000 [1.000,1.000] Sens=1.000 Bal=1.000
-E2-TRIT-only       pooled-random-5fold    MLP  n= 911 AUC=0.992 [0.971,1.000] Spec=0.000 [0.000,0.000] Sens=1.000 Bal=0.500
-E2-TRIT-only       group-by-base-5fold    RF   n= 911 AUC=0.999 [0.997,1.000] Spec=1.000 [1.000,1.000] Sens=0.889 Bal=0.944
-E2-TRIT-only       group-by-base-5fold    XGB  n= 911 AUC=0.970 [0.878,1.000] Spec=1.000 [1.000,1.000] Sens=0.899 Bal=0.949
-E2-TRIT-only       group-by-base-5fold    MLP  n= 911 AUC=0.919 [0.720,1.000] Spec=0.500 [0.125,0.875] Sens=0.890 Bal=0.695
+E2 子集分解（TRIT vs 非 TRIT），cluster bootstrap n=1000, seed=20261012
+E2-TRIT-only       pooled-random-5fold    RF   n= 911 AUC=0.880 [0.648,1.000] Spec=0.000 [0.000,0.000] Sens=1.000 Bal=0.500
+E2-TRIT-only       pooled-random-5fold    XGB  n= 911 AUC=0.691 [0.347,0.932] Spec=0.417 [0.000,0.714] Sens=1.000 Bal=0.708
+E2-TRIT-only       pooled-random-5fold    MLP  n= 911 AUC=0.606 [0.401,0.783] Spec=0.000 [0.000,0.000] Sens=1.000 Bal=0.500
+E2-TRIT-only       group-by-base-5fold    RF   n= 911 AUC=0.693 [0.585,0.875] Spec=0.083 [0.000,0.273] Sens=1.000 Bal=0.542
+E2-TRIT-only       group-by-base-5fold    XGB  n= 911 AUC=0.543 [0.476,0.725] Spec=0.167 [0.000,0.500] Sens=0.778 Bal=0.472
+E2-TRIT-only       group-by-base-5fold    MLP  n= 911 AUC=0.544 [0.489,0.668] Spec=0.167 [0.000,0.500] Sens=0.912 Bal=0.539
 E2-non-TRIT(=E1)   pooled-random-5fold    RF   n= 122 AUC=0.867 [0.455,0.980] Spec=0.733 [0.333,0.940] Sens=0.774 Bal=0.754
 E2-non-TRIT(=E1)   pooled-random-5fold    XGB  n= 122 AUC=0.881 [0.500,0.979] Spec=0.800 [0.425,0.982] Sens=0.758 Bal=0.779
 E2-non-TRIT(=E1)   pooled-random-5fold    MLP  n= 122 AUC=0.876 [0.426,0.979] Spec=0.767 [0.389,0.943] Sens=0.742 Bal=0.754

@@ -108,7 +108,7 @@ def l1(a, b):
 
 def parse_body(logpath):
     txt = Path(logpath).read_text(encoding="utf-8", errors="ignore")
-    m = re.search(r"TROJAN BODY:\s*\n(.*?)\n-{5,}", txt, re.S)
+    m = re.search(r"TROJAN BOD<local-path>)\n-{5,}", txt, re.S)
     if not m:
         return set()
     names = set()

@@ -1,5 +1,5 @@
 C1 无泄漏评价协议 —— 结果汇总
-数据源: D:/10.7/paper/host2027/artifact/results/features_all_v2.csv / D:/10.7/paper/host2027/artifact/results/features_multilib_v2.csv
+数据源: PROJECT_ROOT/results/features_all_v2.csv / PROJECT_ROOT/results/features_multilib_v2.csv
 seed=20261012, bootstrap n=1000（cluster=base design，split 组与 CI 组分离——R4 整改口径），指标=AP/AUC/F1/Sens/Spec/BalAcc/Gmean
 
 ==== E1-pairs ====

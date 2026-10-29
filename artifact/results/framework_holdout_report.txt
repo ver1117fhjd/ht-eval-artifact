@@ -1,5 +1,5 @@
 R7 framework-disjoint 补丁实验
-数据源: D:\10.7\paper\host2027\artifact\experiments\synth_work\features_all_v2.csv（v2，显式钉死）
+数据源: PROJECT_ROOT\paper\host2027\artifact\experiments\synth_work\features_all_v2.csv（v2，显式钉死）
 seed=20261012, n_jobs=1, cluster bootstrap（cluster=base design）
 总行数 1033；TRIT 块 911 行 (pos=899)；非 TRIT 122 行 (pos=62)
 框架块: TRIT + ['AES', 'B15', 'B19', 'MC8051', 'PIC16F84', 'RS232', 'S15850', 'S35932', 'S38417', 'S38584', 'VGA_LCD', 'WB_CONMAX']

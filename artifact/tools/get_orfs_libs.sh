@@ -4,7 +4,7 @@
 # 验证: 检出 commit 应为 3451ca1f56902a49baf50bb8eba345eb709cf9c8 或按 lib_manifest.sha256 核对
 set -u
 DEST="${1:-./libs/OpenROAD-flow-scripts}"
-REPO="https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts.git"
+REPO="http<local-path>"
 
 for i in 1 2 3 4 5 6; do
   echo "=== attempt $i ==="

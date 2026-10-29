@@ -10,13 +10,13 @@ import importlib.util
 import sys
 from pathlib import Path
 
-ROOT = Path(r"D:/10.7")
+ROOT = Path(r"PROJECT_ROOT")
 spec = importlib.util.spec_from_file_location("c2n", ROOT / "src/c2_normalize.py")
 c2 = importlib.util.module_from_spec(spec)
 sys.argv = [sys.argv[0]]          # 防止模块级参数解析被外部参数干扰
 spec.loader.exec_module(c2)
 
-GF180_LIB = r"D:\10.7\libs\liberty\gf180\gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80.lib"
+GF180_LIB = r"PROJECT_ROOT\libs\liberty\gf180\gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80.lib"
 c2.LIBS["gf180"] = GF180_LIB
 
 jobs = c2.find_rtl_designs()

@@ -31,7 +31,7 @@ ROOT = r"./"
 WORK = os.path.join(ROOT, "experiments", "synth_work")
 OUT = os.path.join(ROOT, "experiments", "c2")
 MODELS_DIR = os.path.join(OUT, "aig_models")
-YOSYS = os.environ.get("YOSYS", r"E:\oss-cad-suite\bin\yosys.exe")  # override via env var
+YOSYS = os.environ.get("YOSYS", r"<local-path>")  # override via env var
 TECHS = ("asap7", "nangate45", "sky130hd")
 FEATS = ["frac_and", "frac_inv", "frac_seq", "frac_other",
          "comb_depth_max", "comb_depth_mean", "n_cells", "n_seq"]

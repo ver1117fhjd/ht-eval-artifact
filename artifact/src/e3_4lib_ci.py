@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import roc_auc_score
 
-ROOT = Path(r"D:/10.7")
+ROOT = Path(r"PROJECT_ROOT")
 spec = importlib.util.spec_from_file_location("c1", ROOT / "src/c1_protocol.py")
 c1 = importlib.util.module_from_spec(spec)
 sys.argv = [sys.argv[0]]

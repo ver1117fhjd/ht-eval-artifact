@@ -157,15 +157,26 @@ audit_demo（cone 预算差的探索性 golden-reference 启发式，24 TRIT 对
 真值表实现，也不是盲测定位评估，因此不作为论文的定位性能或 C2 有效性证据。src/ 新增对应脚本 r7_*.py / r8_audit_demo.py。
 数据源路径已消毒为 PROJECT_ROOT（指向本 artifact 根）。种子统一 20261012，模型 n_jobs=1。
 
-## Data provenance after the golden-class correction (2026-10-23)
+## Data provenance after the golden-class correction (2026-10-23; regenerated 2026-10-29)
 
-Two result files in `results/` are **not** re-generated from the corrected
-feature matrices, and are labelled as such:
+Result files and their status:
 
 | file | status |
 |---|---|
 | `gnn_results.csv` | E1 and E3 rows are current; the three `E2-full` rows were computed from the pre-correction TRIT golden class, are superseded, and are **not reported** in the paper (Table VIII reports E1/E3 only). Regenerating them needs the 12 corrected golden graph caches (`probe` recipe in `DEVIATIONS.md`) plus about 4 h of retraining per protocol. |
 | `framework_holdout.csv` | regenerated from the corrected matrices (see `results/framework_holdout_report.txt`). |
+| `perm_test_report.txt` / `perm_test_results.csv` | regenerated 2026-10-29 from the corrected matrices; E2 now includes the RF row (the pre-correction file had E2 XGB only, computed on the broken golden class). |
+| `lit_baseline_report.txt` / `lit_baseline_results.csv` | regenerated 2026-10-29 (E1 rows unchanged vs. the pre-correction run; E2 numbers differ). |
+| `e2_subset_report.txt`, `e2_subset_seed1_report.txt`, `e2_subset_seed2_report.txt` | regenerated 2026-10-29, three seeds (20261012/1/2); source of the seed range quoted in Sec. V-B. The pre-correction single-file `e2_subset_results.csv` aggregate was removed from the package. |
+| `seed_robustness.txt` | regenerated 2026-10-29 (three seeds; behind Table IV's caption and Sec. VII). |
+| `family_xgb.csv` / `.tex` / `.txt` | regenerated 2026-10-29 (the per-family table behind Sec. V-C). |
+| `oracle_control.csv` / `oracle_control_report.txt` | regenerated 2026-10-29 from the corrected matrices. |
+| `m5_fingerprint.txt` (+ `src/m5_fingerprint.py`) | added 2026-10-29: fine-grained golden-degeneracy audit behind Sec. III-B (tier (ii): needs the synthesis workdirs via `M5_SYNTH_WORK`). |
+| `c1_results.csv`, `c1_report.txt`, `c1_delta_auc.csv`, `signature_baseline.*`, `framework_norm_probe.*` | regenerated with the corrected matrices on 2026-10-23 (golden-class correction session). |
+
+Removed from the package (pre-correction outputs, kept outside the artifact):
+`c1_report_v2cd.txt`, `c1_results_v2cd.csv`, `c1_delta_auc_v2cd.csv`,
+`e2_subset_results.csv`.
 
 `aig_detect_results.csv`, `aigA_features.csv`, `aigB_features.csv` and
 `e3*` files come from the four-library matrix (`results/features_multilib*.csv`),

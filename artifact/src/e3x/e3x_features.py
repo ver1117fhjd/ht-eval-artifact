@@ -9,7 +9,7 @@ import json
 import os
 import sys
 
-ROOT = r"D:\10.7"
+ROOT = r"PROJECT_ROOT"
 SRC = os.path.join(ROOT, "paper", "host2027", "artifact", "src")
 sys.path.insert(0, SRC)
 from netlist_features import module_features  # noqa: E402
@@ -20,10 +20,10 @@ E3X = os.path.join(ROOT, "experiments", "e3x")
 SYNTH = os.path.join(E3X, "synth")
 OUT_CSV = os.path.join(E3X, "features_multilib_ext.csv")
 LIBS = {
-    "nangate45": r"D:\10.7\libs\liberty\nangate45\NangateOpenCellLibrary_typical.lib",
-    "sky130hd": r"D:\10.7\libs\liberty\sky130hd\sky130_fd_sc_hd__tt_025C_1v80.lib",
-    "asap7": r"D:\10.7\libs\liberty\asap7\asap7_RVT_TT_merged.lib",
-    "gf180": r"D:\10.7\libs\liberty\gf180\gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80.lib",
+    "nangate45": r"PROJECT_ROOT\libs\liberty\nangate45\NangateOpenCellLibrary_typical.lib",
+    "sky130hd": r"PROJECT_ROOT\libs\liberty\sky130hd\sky130_fd_sc_hd__tt_025C_1v80.lib",
+    "asap7": r"PROJECT_ROOT\libs\liberty\asap7\asap7_RVT_TT_merged.lib",
+    "gf180": r"PROJECT_ROOT\libs\liberty\gf180\gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80.lib",
 }
 META = ["family", "variant", "source", "tech", "module"]
 

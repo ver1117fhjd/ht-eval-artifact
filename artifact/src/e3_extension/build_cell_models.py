@@ -13,9 +13,9 @@ import os
 import re
 from collections import defaultdict
 
-OUT = r"D:\10.7\experiments\e3x"
+OUT = r"PROJECT_ROOT\experiments\e3x"
 inv = json.load(open(os.path.join(OUT, "cell_inventory.json"), encoding="utf-8"))
-LIB = r"D:\10.7\libs\liberty\nangate45\NangateOpenCellLibrary_typical.lib"
+LIB = r"PROJECT_ROOT\libs\liberty\nangate45\NangateOpenCellLibrary_typical.lib"
 libtxt = open(LIB, encoding="utf-8", errors="replace").read()
 
 cells_lib = {}
